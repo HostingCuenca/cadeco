@@ -4,6 +4,7 @@ import Image from "next/image";
 import Header from "./components/Header";
 import ApplicationModal from "./components/ApplicationModal";
 import WhatsAppFloat from "./components/WhatsAppFloat";
+import ProjectGallery from "./components/ProjectGallery";
 import { useState } from "react";
 import {
   Droplet,
@@ -189,27 +190,26 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Productos Cards */}
+          {/* Productos Cards - 2 filas */}
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-            {/* Aditivos */}
-            <div className="group relative overflow-hidden  shadow-2xl">
-              <div className="relative h-96">
+            {/* Fila 1: Aditivos */}
+            <div className="group shadow-2xl">
+              <div className="relative h-96 overflow-hidden">
                 <Image
-                  src="/casa.jpg"
+                  src="https://static.wixstatic.com/media/11062b_3713205551c14d93815f24f31dacae2c~mv2.jpg/v1/fill/w_850,h_1039,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_3713205551c14d93815f24f31dacae2c~mv2.jpg"
                   alt="Aditivos"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="flex items-center gap-3 mb-4">
-                  <svg className="w-8 h-8 text-cadeco-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-white p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <svg className="w-7 h-7" style={{ color: 'rgb(213, 52, 3)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                   </svg>
-                  <h3 className="text-3xl font-light">Aditivos</h3>
+                  <h3 className="text-2xl font-light text-cadeco-dark">Aditivos</h3>
                 </div>
-                <p className="text-gray-200 text-lg">
+                <p className="text-gray-600 leading-relaxed">
                   Nuestros aditivos industriales están formulados para mejorar las propiedades de los materiales
                   de construcción, ofreciendo soluciones innovadoras y eficientes para proyectos de infraestructura
                   a nivel global.
@@ -217,28 +217,55 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Morteros y Recubrimientos */}
-            <div className="group relative overflow-hidden  shadow-2xl">
-              <div className="relative h-96">
+            {/* Fila 1: Morteros y Recubrimientos */}
+            <div className="group shadow-2xl">
+              <div className="relative h-96 overflow-hidden">
                 <Image
-                  src="/cademix-producto.jpg"
+                  src="https://static.wixstatic.com/media/ff6f26_f1812a47d42a486c9edd37c026972bfb~mv2.jpg/v1/fill/w_476,h_319,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cademix.jpg"
                   alt="Morteros y Recubrimientos"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
               </div>
-              <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-                <div className="flex items-center gap-3 mb-4">
-                  <svg className="w-8 h-8 text-cadeco-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="bg-white p-6">
+                <div className="flex items-center gap-3 mb-3">
+                  <svg className="w-7 h-7" style={{ color: 'rgb(213, 52, 3)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                   </svg>
-                  <h3 className="text-3xl font-light">Morteros y Recubrimientos</h3>
+                  <h3 className="text-2xl font-light text-cadeco-dark">Morteros y Recubrimientos</h3>
                 </div>
-                <p className="text-gray-200 text-lg">
+                <p className="text-gray-600 leading-relaxed">
                   Ofrecemos una amplia gama de morteros y recubrimientos de alta calidad, diseñados para brindar
                   durabilidad y rendimiento en aplicaciones de construcción residencial, comercial e industrial.
                 </p>
+              </div>
+            </div>
+
+            {/* Fila 2: Imagen Destacada - Ocupa ambas columnas */}
+            <div className="md:col-span-2 group shadow-2xl">
+              <div className="relative h-[400px] overflow-hidden">
+                <Image
+                  src="https://static.wixstatic.com/media/ff6f26_f1812a47d42a486c9edd37c026972bfb~mv2.jpg/v1/fill/w_476,h_319,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cademix.jpg"
+                  alt="Productos Cadeco"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <div className="bg-white p-8">
+                <h3 className="text-3xl md:text-4xl font-light text-cadeco-dark mb-4">
+                  Calidad certificada en cada producto
+                </h3>
+                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+                  Más de 55 años de experiencia respaldando cada uno de nuestros productos.
+                  Innovación, calidad y compromiso con la construcción del Ecuador.
+                </p>
+                <a
+                  href="#contacto"
+                  className="inline-block px-8 py-4 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors text-lg"
+                  style={{ backgroundColor: 'rgb(213, 52, 3)' }}
+                >
+                  Conoce más
+                </a>
               </div>
             </div>
           </div>
@@ -338,136 +365,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Proyectos y Alianzas Section */}
+      {/* Alianzas Section */}
       <section id="alianzas" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          {/* Únete a nuestro equipo */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-6">
-              Únete a nuestro equipo
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Estamos buscando talento
-            </p>
-          </div>
-
-          {/* Vacantes Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
-            {/* Ingeniero de Producción */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow">
-              <h3 className="text-2xl font-light text-cadeco-dark mb-4">
-                Ingeniero de Producción
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Si eres un profesional comprometido en busca de nuevos desafíos, ¡queremos conocerte! Forma parte de nuestro equipo y contribuye al desarrollo de soluciones innovadoras en el sector industrial.
-              </p>
-              <button
-                onClick={() => handleApplyClick("Ingeniero de Producción")}
-                className="inline-block px-6 py-3 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors"
-                style={{ backgroundColor: 'rgb(213, 52, 3)' }}
-              >
-                Aplicar ahora
-              </button>
-            </div>
-
-            {/* Técnico de Control de Calidad */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow">
-              <h3 className="text-2xl font-light text-cadeco-dark mb-4">
-                Técnico de Control de Calidad
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                ¿Tienes experiencia en control de calidad y buscas un ambiente de trabajo dinámico y retador? Esta es tu oportunidad para formar parte de un equipo enfocado en la excelencia y la mejora continua.
-              </p>
-              <button
-                onClick={() => handleApplyClick("Técnico de Control de Calidad")}
-                className="inline-block px-6 py-3 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors"
-                style={{ backgroundColor: 'rgb(213, 52, 3)' }}
-              >
-                Aplicar ahora
-              </button>
-            </div>
-
-            {/* Especialista en Logística */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow">
-              <h3 className="text-2xl font-light text-cadeco-dark mb-4">
-                Especialista en Logística
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Únete a nuestro equipo como especialista en logística y contribuye al éxito de nuestra cadena de suministro. Si buscas un entorno de trabajo colaborativo y desafíos constantes, esta es tu oportunidad.
-              </p>
-              <button
-                onClick={() => handleApplyClick("Especialista en Logística")}
-                className="inline-block px-6 py-3 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors"
-                style={{ backgroundColor: 'rgb(213, 52, 3)' }}
-              >
-                Aplicar ahora
-              </button>
-            </div>
-
-            {/* Supervisor de Producción */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow">
-              <h3 className="text-2xl font-light text-cadeco-dark mb-4">
-                Supervisor de Producción
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                ¿Tienes experiencia liderando equipos de trabajo en entornos industriales? Si eres apasionado por la excelencia operativa, ¡queremos que formes parte de nuestro equipo!
-              </p>
-              <button
-                onClick={() => handleApplyClick("Supervisor de Producción")}
-                className="inline-block px-6 py-3 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors"
-                style={{ backgroundColor: 'rgb(213, 52, 3)' }}
-              >
-                Aplicar ahora
-              </button>
-            </div>
-
-            {/* Ingeniero de Procesos */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow">
-              <h3 className="text-2xl font-light text-cadeco-dark mb-4">
-                Ingeniero de Procesos
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Buscamos un ingeniero de procesos para contribuir al desarrollo y optimización de nuestras operaciones. Si eres proactivo y orientado a resultados, ¡te estamos buscando!
-              </p>
-              <button
-                onClick={() => handleApplyClick("Ingeniero de Procesos")}
-                className="inline-block px-6 py-3 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors"
-                style={{ backgroundColor: 'rgb(213, 52, 3)' }}
-              >
-                Aplicar ahora
-              </button>
-            </div>
-
-            {/* Técnico de Mantenimiento */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow">
-              <h3 className="text-2xl font-light text-cadeco-dark mb-4">
-                Técnico de Mantenimiento
-              </h3>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                Si eres un técnico especializado en mantenimiento industrial, únete a nuestro equipo y participa en el cuidado y optimización de nuestros activos. ¡Esta es tu oportunidad para crecer y desarrollarte profesionalmente!
-              </p>
-              <button
-                onClick={() => handleApplyClick("Técnico de Mantenimiento")}
-                className="inline-block px-6 py-3 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors"
-                style={{ backgroundColor: 'rgb(213, 52, 3)' }}
-              >
-                Aplicar ahora
-              </button>
-            </div>
-          </div>
-
-          {/* Imagen CONTRAPORTADA.gif */}
-          <div className="max-w-5xl mx-auto mb-20">
-            <div className="relative h-96 overflow-hidden shadow-2xl">
-              <Image
-                src="/CONTRAPORTADA.gif"
-                alt="Cadeco - Únete a nuestro equipo"
-                fill
-                className="object-cover"
-              />
-            </div>
-          </div>
-
           {/* Nuestros Aliados */}
           <div className="text-center mb-16">
             <h3 className="text-3xl md:text-4xl font-light text-cadeco-dark mb-4">
@@ -478,44 +378,37 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white p-6 shadow-lg flex items-center justify-center">
+          <div className="max-w-5xl mx-auto">
+            <div className="relative w-full h-48 md:h-64">
               <Image
                 src="/ok-logos.gif"
-                alt="Aliado"
-                width={150}
-                height={80}
-                className="w-auto h-20 object-contain"
-              />
-            </div>
-            <div className="bg-white p-6 shadow-lg flex items-center justify-center">
-              <Image
-                src="/logohorizontal-letrasblancas.png"
-                alt="Aliado"
-                width={150}
-                height={80}
-                className="w-auto h-20 object-contain"
-              />
-            </div>
-            <div className="bg-white p-6 shadow-lg flex items-center justify-center">
-              <Image
-                src="/logoprincipal.png"
-                alt="Aliado"
-                width={150}
-                height={80}
-                className="w-auto h-20 object-contain"
-              />
-            </div>
-            <div className="bg-white p-6 shadow-lg flex items-center justify-center">
-              <Image
-                src="/info-footer.gif"
-                alt="Aliado"
-                width={150}
-                height={80}
-                className="w-auto h-20 object-contain"
+                alt="Nuestros Aliados"
+                fill
+                className="object-contain"
               />
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Nuestro Impacto Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
+              Nuestro Impacto
+            </h2>
+            <p className="text-xl text-gray-600 mb-2">
+              Proyectos Destacados
+            </p>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Conoce algunos de los proyectos en los que hemos participado y descubre cómo nuestras soluciones
+              han contribuido al éxito y la excelencia en la industria de la construcción.
+            </p>
+          </div>
+
+          {/* Galería Horizontal con Flechas */}
+          <ProjectGallery />
         </div>
       </section>
 
@@ -664,69 +557,6 @@ export default function Home() {
 
       {/* Botón flotante de WhatsApp */}
       <WhatsAppFloat />
-
-      {/* Footer */}
-      <footer className="bg-cadeco-black text-white py-12">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <Image
-                src="/logoprincipal-letrasblancas.png"
-                alt="Cadeco Global"
-                width={150}
-                height={50}
-                className="h-12 w-auto mb-4"
-              />
-              <p className="text-gray-400">
-                Desde 1968 construyendo sueños y creando soluciones de calidad para la construcción moderna.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-light text-lg mb-4">Enlaces Rápidos</h3>
-              <ul className="space-y-2">
-                <li><a href="#inicio" className="text-gray-400 hover:text-cadeco-orange transition-colors">Inicio</a></li>
-                <li><a href="#nosotros" className="text-gray-400 hover:text-cadeco-orange transition-colors">Nosotros</a></li>
-                <li><a href="#productos" className="text-gray-400 hover:text-cadeco-orange transition-colors">Productos</a></li>
-                <li><a href="#alianzas" className="text-gray-400 hover:text-cadeco-orange transition-colors">Alianzas y Proyectos</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-light text-lg mb-4">Productos</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-400 hover:text-cadeco-orange transition-colors">Aditivos Industriales</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-cadeco-orange transition-colors">Morteros Especiales</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-cadeco-orange transition-colors">Recubrimientos</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-cadeco-orange transition-colors">Asesoría Técnica</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-medium text-lg mb-4">Contacto</h3>
-              <ul className="space-y-2 text-gray-400 font-light">
-                <li className="text-sm">Argelia Alta, Macuchi 251 y CuyuJa<br />Quito, Ecuador</li>
-                <li>Fijo: (02) 3080 948</li>
-                <li>WhatsApp/Cel:</li>
-                <li className="ml-2">096 0162 310</li>
-                <li className="ml-2">098 2428 979</li>
-                <li>info@cadecoglobal.com</li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 pt-8 text-center text-gray-400">
-            <p className="mb-2">&copy; 2024 Cadeco Global Ecuador. Todos los derechos reservados.</p>
-            <p className="text-sm">
-              Sitio web desarrollado por{" "}
-              <a
-                href="https://torisoftt.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-cadeco-orange hover:text-cadeco-orange-light transition-colors font-medium"
-              >
-                Torisoftt
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
