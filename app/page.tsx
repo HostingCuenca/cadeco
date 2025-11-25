@@ -16,6 +16,7 @@ import {
   Wrench,
   GraduationCap
 } from "lucide-react";
+import productsData from "@/data/products.json";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -190,131 +191,203 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Productos Cards - 2 filas */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-16">
-            {/* Fila 1: Aditivos */}
-            <div className="group shadow-2xl">
-              <div className="relative h-96 overflow-hidden">
-                <Image
-                  src="https://static.wixstatic.com/media/11062b_3713205551c14d93815f24f31dacae2c~mv2.jpg/v1/fill/w_850,h_1039,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_3713205551c14d93815f24f31dacae2c~mv2.jpg"
-                  alt="Aditivos"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="bg-white p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <svg className="w-7 h-7" style={{ color: 'rgb(213, 52, 3)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                  </svg>
-                  <h3 className="text-2xl font-light text-cadeco-dark">Aditivos</h3>
+          {/* Productos Cards - Categorías desde JSON */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+            {productsData.categories.map((category) => (
+              <div key={category.id} className="group shadow-2xl hover:shadow-3xl transition-all">
+                <div className="relative h-80 overflow-hidden">
+                  <Image
+                    src={category.image}
+                    alt={category.name}
+                    fill
+                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-2xl font-light text-white mb-2">
+                      {category.name}
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      {category.productIds.length} productos disponibles
+                    </p>
+                  </div>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
-                  Nuestros aditivos industriales están formulados para mejorar las propiedades de los materiales
-                  de construcción, ofreciendo soluciones innovadoras y eficientes para proyectos de infraestructura
-                  a nivel global.
-                </p>
-              </div>
-            </div>
-
-            {/* Fila 1: Morteros y Recubrimientos */}
-            <div className="group shadow-2xl">
-              <div className="relative h-96 overflow-hidden">
-                <Image
-                  src="https://static.wixstatic.com/media/ff6f26_f1812a47d42a486c9edd37c026972bfb~mv2.jpg/v1/fill/w_476,h_319,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cademix.jpg"
-                  alt="Morteros y Recubrimientos"
-                  fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <div className="bg-white p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <svg className="w-7 h-7" style={{ color: 'rgb(213, 52, 3)' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                  </svg>
-                  <h3 className="text-2xl font-light text-cadeco-dark">Morteros y Recubrimientos</h3>
+                <div className="bg-white p-6">
+                  <p className="text-gray-600 leading-relaxed mb-4">
+                    {category.description}
+                  </p>
+                  <a
+                    href={`#productos-${category.slug}`}
+                    className="inline-block text-cadeco-orange font-medium hover:text-cadeco-orange-light transition-colors"
+                  >
+                    Ver productos →
+                  </a>
                 </div>
-                <p className="text-gray-600 leading-relaxed">
-                  Ofrecemos una amplia gama de morteros y recubrimientos de alta calidad, diseñados para brindar
-                  durabilidad y rendimiento en aplicaciones de construcción residencial, comercial e industrial.
-                </p>
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Fila 2: Imagen Destacada - Ocupa ambas columnas */}
-            <div className="md:col-span-2 group shadow-2xl">
-              <div className="relative h-[400px] overflow-hidden">
-                <Image
-                  src="https://static.wixstatic.com/media/ff6f26_f1812a47d42a486c9edd37c026972bfb~mv2.jpg/v1/fill/w_476,h_319,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/cademix.jpg"
-                  alt="Productos Cadeco"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="bg-white p-8">
-                <h3 className="text-3xl md:text-4xl font-light text-cadeco-dark mb-4">
-                  Calidad certificada en cada producto
-                </h3>
-                <p className="text-xl text-gray-600 mb-6 leading-relaxed">
-                  Más de 55 años de experiencia respaldando cada uno de nuestros productos.
-                  Innovación, calidad y compromiso con la construcción del Ecuador.
-                </p>
-                <a
-                  href="#contacto"
-                  className="inline-block px-8 py-4 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors text-lg"
-                  style={{ backgroundColor: 'rgb(213, 52, 3)' }}
-                >
-                  Conoce más
-                </a>
-              </div>
+          {/* Destacados */}
+          <div className="max-w-7xl mx-auto">
+            <h3 className="text-3xl md:text-4xl font-light text-cadeco-dark mb-8 text-center">
+              Productos Destacados
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {Object.values(productsData.products)
+                .filter((product: any) => product.featured)
+                .slice(0, 4)
+                .map((product: any) => (
+                  <div key={product.id} className="bg-white shadow-lg hover:shadow-2xl transition-shadow group">
+                    <div className="relative h-56 overflow-hidden">
+                      <Image
+                        src={product.images.main}
+                        alt={product.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <span className="text-xs text-cadeco-orange font-medium uppercase tracking-wide">
+                        {product.type}
+                      </span>
+                      <h4 className="text-lg font-light text-cadeco-dark mt-2 mb-2">
+                        {product.name}
+                      </h4>
+                      <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                        {product.overview.shortDescription}
+                      </p>
+                      <button className="text-sm text-cadeco-orange font-medium hover:text-cadeco-orange-light transition-colors">
+                        Ver detalles →
+                      </button>
+                    </div>
+                  </div>
+                ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Nuestros Productos - Grid */}
-      <section className="py-20 bg-cadeco-gray">
+      {/* Catálogo Completo por Categorías */}
+      {productsData.categories.map((category, categoryIndex) => {
+        const categoryProducts = category.productIds.map(
+          (id) => productsData.products[id as keyof typeof productsData.products]
+        );
+
+        return (
+          <section
+            key={category.id}
+            id={`productos-${category.slug}`}
+            className={categoryIndex % 2 === 0 ? "py-20 bg-white" : "py-20 bg-cadeco-gray"}
+          >
+            <div className="container mx-auto px-4">
+              {/* Header de Categoría */}
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
+                  {category.name}
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  {category.description}
+                </p>
+              </div>
+
+              {/* Grid de Productos */}
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+                {categoryProducts.map((product: any) => (
+                  <div
+                    key={product.id}
+                    className="bg-white shadow-lg hover:shadow-2xl transition-all group"
+                  >
+                    {/* Imagen del Producto */}
+                    <div className="relative h-72 overflow-hidden">
+                      <Image
+                        src={product.images.main}
+                        alt={product.name}
+                        fill
+                        className="object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      {product.featured && (
+                        <div className="absolute top-3 right-3 bg-cadeco-orange text-white px-3 py-1 text-xs font-medium rounded-full">
+                          Destacado
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Contenido del Producto */}
+                    <div className="p-5">
+                      {/* Tipo de Producto */}
+                      <span className="text-xs text-cadeco-orange font-medium uppercase tracking-wide">
+                        {product.type}
+                      </span>
+
+                      {/* Nombre */}
+                      <h3 className="text-xl font-light text-cadeco-dark mt-2 mb-3">
+                        {product.name}
+                      </h3>
+
+                      {/* Descripción Corta */}
+                      <p className="text-sm text-gray-600 mb-4 line-clamp-3">
+                        {product.overview.shortDescription}
+                      </p>
+
+                      {/* Tags de Aplicación */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {product.applications.locations.slice(0, 2).map((location: string) => (
+                          <span
+                            key={location}
+                            className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                          >
+                            {location}
+                          </span>
+                        ))}
+                      </div>
+
+                      {/* Características Principales */}
+                      <div className="space-y-2 mb-4">
+                        {product.features.slice(0, 3).map((feature: any, idx: number) => (
+                          <div key={idx} className="flex items-start gap-2">
+                            <svg className="w-4 h-4 text-cadeco-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                            </svg>
+                            <span className="text-xs text-gray-700">{feature.title}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Empaque */}
+                      {product.packaging && (
+                        <div className="text-xs text-gray-500 mb-4">
+                          Presentación: <strong>{product.packaging.weight}</strong>
+                        </div>
+                      )}
+
+                      {/* Botón */}
+                      <button className="w-full py-3 bg-cadeco-dark text-white text-sm font-medium hover:bg-cadeco-orange transition-colors">
+                        Ver ficha técnica
+                      </button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        );
+      })}
+
+      {/* Servicios y Soporte */}
+      <section className="py-20 bg-white border-t">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
-              Nuestros productos
+              Servicios y Soporte
             </h2>
             <p className="text-xl text-gray-600">
-              Variedad y Calidad Garantizada
-            </p>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
-              Nuestros productos están diseñados para ofrecer soluciones efectivas y de alto rendimiento
-              en la industria de la construcción. Conoce más sobre nuestra gama de aditivos, morteros y recubrimientos.
+              Más que productos, ofrecemos soluciones completas
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Aditivos Industriales */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <Droplet className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Aditivos Industriales</h3>
-            </div>
-
-            {/* Morteros Especiales */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <Building2 className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Morteros Especiales</h3>
-            </div>
-
-            {/* Recubrimientos Innovadores */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <PaintBucket className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Recubrimientos Innovadores</h3>
-            </div>
-
             {/* Asesoría Técnica */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
               <div className="mb-4">
                 <BookOpen className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
               </div>
@@ -322,44 +395,36 @@ export default function Home() {
             </div>
 
             {/* Desarrollo a Medida */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
               <div className="mb-4">
                 <Lightbulb className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
               </div>
               <h3 className="font-light text-xl text-cadeco-dark">Desarrollo a Medida</h3>
             </div>
 
-            {/* Soporte Técnico Especializado */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+            {/* Soporte Técnico */}
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
               <div className="mb-4">
                 <Headphones className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
               </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Soporte Técnico Especializado</h3>
+              <h3 className="font-light text-xl text-cadeco-dark">Soporte Especializado</h3>
             </div>
 
-            {/* Asistencia Técnica en Obra */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <Wrench className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Asistencia Técnica en Obra</h3>
-            </div>
-
-            {/* Capacitación Especializada */}
-            <div className="bg-white p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+            {/* Capacitación */}
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
               <div className="mb-4">
                 <GraduationCap className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
               </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Capacitación Especializada</h3>
+              <h3 className="font-light text-xl text-cadeco-dark">Capacitación</h3>
             </div>
           </div>
 
           <div className="text-center mt-12">
             <a
               href="#contacto"
-              className="inline-block px-8 py-4 bg-cadeco-orange text-white  font-medium hover:bg-cadeco-orange-light transition-colors text-lg"
+              className="inline-block px-8 py-4 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors text-lg"
             >
-              Ver más
+              Solicitar asesoría
             </a>
           </div>
         </div>

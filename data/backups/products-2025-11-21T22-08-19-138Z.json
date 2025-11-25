@@ -1,0 +1,1079 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "lastUpdated": "2025-11-20",
+    "totalProducts": 13,
+    "totalCategories": 5,
+    "itemsPerPage": 12
+  },
+  "categories": [
+    {
+      "id": "morteros-adhesivos",
+      "name": "Morteros y Adhesivos",
+      "slug": "morteros-adhesivos",
+      "description": "Adhesivos de alta calidad para instalación de cerámicas, porcelanatos y revestimientos",
+      "productIds": ["cademix-plus", "cademix-standard", "cademix-premium-uno", "porcelax"],
+      "image": "/productos/morterosadhesivosyporcelax/cademix producto banner.jpg"
+    },
+    {
+      "id": "endurecedores",
+      "name": "Endurecedores de Pisos",
+      "slug": "endurecedores-pisos",
+      "description": "Endurecedores superficiales para pisos de hormigón de alto tráfico",
+      "productIds": ["kd-cuarzo-losas", "kd-cuarzo-pisos"],
+      "image": "/productos/kdcuarzo/kd-cuarzo-pisos producto foto.jpg"
+    },
+    {
+      "id": "acabados",
+      "name": "Acabados para Paredes",
+      "slug": "acabados-paredes",
+      "description": "Masillas y empastes para interiores y exteriores",
+      "productIds": ["cadempaste-interior", "cadempaste-exterior"],
+      "image": "/productos/Empastes/obra empaste interior.jpg"
+    },
+    {
+      "id": "recubrimientos",
+      "name": "Recubrimientos Especiales",
+      "slug": "recubrimientos-especiales",
+      "description": "Selladores y recubrimientos para protección de superficies",
+      "productIds": ["cadeclear-solvente", "cadeco-canchas", "cadeco-resurfacer"],
+      "image": "/productos/acabados/cadeco-canchas.jpg"
+    },
+    {
+      "id": "aditivos",
+      "name": "Aditivos para Hormigón",
+      "slug": "aditivos-hormigon",
+      "description": "Aditivos impermeabilizantes y plastificantes para hormigón",
+      "productIds": ["imperkret-dm", "plastidec"],
+      "image": "/productos/Aditivos/imagen-global-aditivos.jpg"
+    }
+  ],
+  "products": {
+    "cademix-plus": {
+      "id": "cademix-plus",
+      "sku": "CAD-MIX-PLUS-26",
+      "name": "CADEMIX® Plus",
+      "slug": "cademix-plus",
+      "categoryId": "morteros-adhesivos",
+      "type": "Mortero Adhesivo",
+      "featured": true,
+      "images": {
+        "main": "/productos/morterosadhesivosyporcelax/cademix PLUS producto.jpg",
+        "banner": "/productos/morterosadhesivosyporcelax/cademix producto banner.jpg",
+        "gallery": [
+          "/productos/morterosadhesivosyporcelax/Obra El portal Cademix.jpg",
+          "/productos/morterosadhesivosyporcelax/Obra ADAGIO morteros adhesivos.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "26kg",
+        "unit": "saco",
+        "color": "Azul"
+      },
+      "overview": {
+        "tagline": "Mortero adhesivo para cerámicas y placas de mediana absorción",
+        "shortDescription": "Diseñado para pegar baldosas de mediana absorción y cerámica sobre cerámica.",
+        "fullDescription": "Es un mortero adhesivo diseñado para pegar baldosas (cerámicas, porcelanato) y otras placas de mediana absorción. Se usa para pisos y paredes, tanto en interiores como en exteriores, y es apto para uso residencial, industrial y comercial."
+      },
+      "applications": {
+        "surfaces": ["Pisos", "Paredes"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Residencial", "Industrial", "Comercial"],
+        "materials": ["Cerámicas", "Porcelanato", "Mosaicos", "Gres", "Piedras naturales", "Piedras artificiales"],
+        "special": ["Cerámica sobre Cerámica"]
+      },
+      "features": [
+        {
+          "icon": "polymer",
+          "title": "Reforzado con polímeros",
+          "description": "Excelente adherencia para mayor durabilidad"
+        },
+        {
+          "icon": "layers",
+          "title": "Cerámica sobre cerámica",
+          "description": "Permite pegar cerámica sobre cerámica existente"
+        },
+        {
+          "icon": "water-drop",
+          "title": "Fácil preparación",
+          "description": "Solo añadir agua, sin complicaciones"
+        },
+        {
+          "icon": "performance",
+          "title": "Mayor rendimiento",
+          "description": "Optimiza el uso del material"
+        }
+      ],
+      "technicalSpecs": {
+        "workingTime": {
+          "value": 2,
+          "unit": "horas",
+          "description": "Vida de la mezcla preparada"
+        },
+        "coverage": {
+          "value": "4-6",
+          "unit": "kg/m²",
+          "description": "Dependiendo del tipo de llana"
+        },
+        "standard": "ANSI A118.4",
+        "transitType": "Tránsito moderado"
+      },
+      "limitations": [
+        "No usar en hornos ni chimeneas",
+        "No usar en cuartos fríos",
+        "No usar en pisos industriales expuestos a químicos",
+        "No usar para nivelar pisos"
+      ],
+      "relatedProducts": ["cademix-premium-uno", "porcelax", "cademix-standard"],
+      "seo": {
+        "metaTitle": "CADEMIX® Plus - Mortero Adhesivo para Cerámica | CADECO",
+        "metaDescription": "Mortero adhesivo reforzado con polímeros para baldosas de mediana absorción. Ideal para cerámica sobre cerámica en interiores y exteriores.",
+        "keywords": ["mortero adhesivo", "cerámica", "porcelanato", "CADEMIX", "adhesivo cerámico"]
+      }
+    },
+    "cademix-standard": {
+      "id": "cademix-standard",
+      "sku": "CAD-MIX-STD-26",
+      "name": "CADEMIX® Standard",
+      "slug": "cademix-standard",
+      "categoryId": "morteros-adhesivos",
+      "type": "Mortero Adhesivo",
+      "featured": false,
+      "images": {
+        "main": "/productos/morterosadhesivosyporcelax/cademix STANDARD producto.jpg",
+        "banner": "/productos/morterosadhesivosyporcelax/cademix producto banner.jpg",
+        "gallery": [
+          "/productos/morterosadhesivosyporcelax/Obra ADAGIO morteros adhesivos.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "26kg",
+        "unit": "saco",
+        "color": "Verde"
+      },
+      "overview": {
+        "tagline": "Mortero adhesivo para baldosas de alta absorción",
+        "shortDescription": "Formulado para pegar baldosas y placas de alta absorción (>6%).",
+        "fullDescription": "Es un mortero adhesivo formulado para pegar baldosas (cerámicas, azulejos) y otras placas de alta absorción (absorción mayor al 6%). Es para pisos y paredes, en interiores y exteriores, en áreas residenciales y comerciales."
+      },
+      "applications": {
+        "surfaces": ["Pisos", "Paredes"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Residencial", "Comercial"],
+        "materials": ["Cerámicas", "Azulejos", "Placas de alta absorción"],
+        "special": ["Superficies nuevas"]
+      },
+      "features": [
+        {
+          "icon": "adhesion",
+          "title": "Excelente adherencia",
+          "description": "Alta capacidad de adhesión"
+        },
+        {
+          "icon": "trowel",
+          "title": "Buena tixotropía",
+          "description": "Fácil de trabajar y aplicar"
+        },
+        {
+          "icon": "water-drop",
+          "title": "Fácil preparación",
+          "description": "Solo requiere añadir agua"
+        },
+        {
+          "icon": "performance",
+          "title": "Mayor rendimiento",
+          "description": "Para formatos ≤ 45cm x 45cm"
+        }
+      ],
+      "technicalSpecs": {
+        "workingTime": {
+          "value": 2,
+          "unit": "horas",
+          "description": "Vida de la mezcla preparada"
+        },
+        "coverage": {
+          "value": "4-6",
+          "unit": "kg/m²",
+          "description": "Según tipo de llana"
+        },
+        "standard": "ANSI A118.1",
+        "transitType": "Tránsito liviano"
+      },
+      "limitations": [
+        "No usar en hornos ni chimeneas",
+        "No usar en cuartos fríos",
+        "No usar en pisos industriales químicos",
+        "No usar con revestimientos de baja absorción",
+        "No usar en mármol o piedra pizarra"
+      ],
+      "relatedProducts": ["cademix-plus", "cademix-premium-uno"],
+      "seo": {
+        "metaTitle": "CADEMIX® Standard - Mortero para Cerámica Alta Absorción | CADECO",
+        "metaDescription": "Mortero adhesivo para baldosas de alta absorción. Ideal para cerámicas y azulejos en interiores y exteriores.",
+        "keywords": ["mortero adhesivo", "cerámica", "azulejos", "alta absorción", "CADEMIX"]
+      }
+    },
+    "cademix-premium-uno": {
+      "id": "cademix-premium-uno",
+      "sku": "CAD-MIX-PRE-26",
+      "name": "CADEMIX® Premium Uno",
+      "slug": "cademix-premium-uno",
+      "categoryId": "morteros-adhesivos",
+      "type": "Mortero Adhesivo",
+      "featured": true,
+      "images": {
+        "main": "/productos/morterosadhesivosyporcelax/cademix PREMIUM-UNO producto.jpg",
+        "banner": "/productos/morterosadhesivosyporcelax/cademix producto banner.jpg",
+        "gallery": [
+          "/productos/morterosadhesivosyporcelax/Obra ADAGIO morteros adhesivos.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "26kg",
+        "unit": "saco",
+        "color": "Rojo"
+      },
+      "overview": {
+        "tagline": "Mortero premium con polímeros para porcelanatos",
+        "shortDescription": "Mortero con polímeros para porcelanatos y baja absorción (<3%).",
+        "fullDescription": "Es un mortero adhesivo con polímeros para una mayor adherencia y plasticidad, diseñado para pegar porcelanatos y otras placas de baja absorción (absorción menor al 3%). Es ideal para pisos y paredes en interiores y exteriores de uso residencial, industrial y comercial."
+      },
+      "applications": {
+        "surfaces": ["Pisos", "Paredes"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Residencial", "Industrial", "Comercial"],
+        "materials": ["Porcelanatos", "Gres", "Mosaicos", "Piedras naturales", "Piedras artificiales", "Piedra pizarra (interior)"],
+        "special": ["Porcelanato sobre Porcelanato", "Alta tránsito"]
+      },
+      "features": [
+        {
+          "icon": "polymer",
+          "title": "Reforzado con polímeros",
+          "description": "Máxima adherencia y plasticidad"
+        },
+        {
+          "icon": "layers",
+          "title": "Porcelanato sobre porcelanato",
+          "description": "Permite pegar porcelanato sobre existente"
+        },
+        {
+          "icon": "clock",
+          "title": "Mayor tiempo abierto",
+          "description": "Hasta 8 horas de vida de mezcla"
+        },
+        {
+          "icon": "performance",
+          "title": "Alto desempeño",
+          "description": "Para alta tránsito y exigencia"
+        }
+      ],
+      "technicalSpecs": {
+        "workingTime": {
+          "value": 8,
+          "unit": "horas",
+          "description": "Vida útil de la mezcla"
+        },
+        "coverage": {
+          "value": "4-6",
+          "unit": "kg/m²",
+          "description": "Según tipo de llana"
+        },
+        "standard": "ANSI A118.4",
+        "transitType": "Alta tránsito"
+      },
+      "limitations": [
+        "No usar en hornos ni chimeneas",
+        "No usar en cuartos fríos",
+        "No usar en pisos industriales expuestos a químicos"
+      ],
+      "relatedProducts": ["cademix-plus", "porcelax"],
+      "seo": {
+        "metaTitle": "CADEMIX® Premium Uno - Mortero para Porcelanato | CADECO",
+        "metaDescription": "Mortero adhesivo premium con polímeros para porcelanatos de baja absorción. Mayor tiempo abierto y adherencia.",
+        "keywords": ["mortero porcelanato", "adhesivo premium", "baja absorción", "CADEMIX", "polímeros"]
+      }
+    },
+    "porcelax": {
+      "id": "porcelax",
+      "sku": "POR-LAX-2.2",
+      "name": "PORCELAX",
+      "slug": "porcelax",
+      "categoryId": "morteros-adhesivos",
+      "type": "Porcelana para Juntas",
+      "featured": false,
+      "images": {
+        "main": "/productos/morterosadhesivosyporcelax/porcelax-pnege producto.png",
+        "banner": "/productos/morterosadhesivosyporcelax/Obra CIELO Porcelax.jpg",
+        "gallery": [
+          "/productos/morterosadhesivosyporcelax/Obra CIELO Porcelax.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "2.2kg",
+        "unit": "bolsa",
+        "color": "Verde oscuro"
+      },
+      "overview": {
+        "tagline": "Porcelana con polímeros para juntas de 1.5 a 6mm",
+        "shortDescription": "Mortero de colores modificado con polímeros para rellenar juntas.",
+        "fullDescription": "Es un mortero de colores modificado con polímeros que se usa para rellenar las juntas (los espacios entre baldosas) en pisos y paredes. Se utiliza en áreas residenciales y comerciales, tanto en interiores como en exteriores."
+      },
+      "applications": {
+        "surfaces": ["Pisos", "Paredes"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Residencial", "Comercial"],
+        "materials": ["Azulejo", "Cerámica", "Mármol", "Granito", "Piedras naturales", "Porcelanato"],
+        "special": ["Juntas de 1.5mm a 6mm"]
+      },
+      "features": [
+        {
+          "icon": "polymer",
+          "title": "Con polímeros",
+          "description": "Mejora adherencia y evita fisuras"
+        },
+        {
+          "icon": "shield",
+          "title": "Resistente",
+          "description": "A la abrasión y filtración de agua"
+        },
+        {
+          "icon": "palette",
+          "title": "Colores duraderos",
+          "description": "Homogéneos y resistentes"
+        },
+        {
+          "icon": "easy",
+          "title": "Fácil aplicación",
+          "description": "Simple de mezclar y limpiar"
+        }
+      ],
+      "technicalSpecs": {
+        "jointWidth": {
+          "min": 1.5,
+          "max": 6,
+          "unit": "mm",
+          "description": "Ancho de junta recomendado"
+        },
+        "coverage": {
+          "value": "Variable",
+          "unit": "kg/m²",
+          "description": "Según ancho de junta"
+        }
+      },
+      "colors": [
+        "Blanco",
+        "Gris",
+        "Beige",
+        "Negro",
+        "Café"
+      ],
+      "limitations": [
+        "No usar en hornos ni chimeneas",
+        "No usar en cuartos fríos o de vapor"
+      ],
+      "relatedProducts": ["cademix-plus", "cademix-premium-uno"],
+      "seo": {
+        "metaTitle": "PORCELAX - Porcelana para Juntas con Polímeros | CADECO",
+        "metaDescription": "Mortero de colores para juntas de 1.5 a 6mm. Resistente a abrasión y filtración.",
+        "keywords": ["porcelana juntas", "sellador juntas", "mortero colores", "PORCELAX"]
+      }
+    },
+    "kd-cuarzo-losas": {
+      "id": "kd-cuarzo-losas",
+      "sku": "KD-CZO-LSA-25",
+      "name": "KD CUARZO LOSAS",
+      "slug": "kd-cuarzo-losas",
+      "categoryId": "endurecedores",
+      "type": "Endurecedor para Tránsito Liviano",
+      "featured": false,
+      "images": {
+        "main": "/productos/kdcuarzo/kd-cuarzo-losas producto foto.jpg",
+        "banner": "/productos/kdcuarzo/kd-cuarzo-losas producto foto.jpg",
+        "gallery": [
+          "/productos/kdcuarzo/kd-cuarzo-pisos producto foto.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "25kg",
+        "unit": "saco"
+      },
+      "overview": {
+        "tagline": "Endurecedor superficial para hormigón fresco",
+        "shortDescription": "Polvo endurecedor superficial para hormigón fresco en tránsito liviano.",
+        "fullDescription": "Es un polvo endurecedor de superficie hecho a base de cemento, aditivos y cuarzo, que se aplica sobre el hormigón fresco. Su función es darle más resistencia a la parte de arriba del piso o losa y evitar que se desgaste rápidamente."
+      },
+      "applications": {
+        "surfaces": ["Losas", "Terrazas", "Veredas", "Pisos"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Residencial", "Comercial"],
+        "materials": ["Hormigón fresco"],
+        "special": ["Tránsito liviano", "Tránsito peatonal"]
+      },
+      "features": [
+        {
+          "icon": "strength",
+          "title": "Fortalece superficie",
+          "description": "Aumenta resistencia superficial"
+        },
+        {
+          "icon": "dust",
+          "title": "Reduce polvo",
+          "description": "Minimiza formación de polvo"
+        },
+        {
+          "icon": "non-slip",
+          "title": "Antideslizante",
+          "description": "Proporciona superficie segura"
+        },
+        {
+          "icon": "maintenance",
+          "title": "Fácil mantenimiento",
+          "description": "Limpieza simple y rápida"
+        }
+      ],
+      "technicalSpecs": {
+        "application": {
+          "method": "Espolvoreado",
+          "surface": "Hormigón fresco",
+          "timing": "Antes del fraguado"
+        },
+        "coverage": {
+          "value": "3-5",
+          "unit": "kg/m²",
+          "description": "Según nivel de tránsito"
+        }
+      },
+      "limitations": [
+        "Solo aplicar sobre hormigón fresco",
+        "No aplicar bajo lluvia",
+        "No para tránsito vehicular pesado"
+      ],
+      "relatedProducts": ["kd-cuarzo-pisos"],
+      "seo": {
+        "metaTitle": "KD CUARZO LOSAS - Endurecedor para Hormigón | CADECO",
+        "metaDescription": "Endurecedor superficial de cuarzo para hormigón fresco. Ideal para tránsito liviano y peatonal.",
+        "keywords": ["endurecedor hormigón", "cuarzo", "losas", "KD CUARZO"]
+      }
+    },
+    "kd-cuarzo-pisos": {
+      "id": "kd-cuarzo-pisos",
+      "sku": "KD-CZO-PIS-25",
+      "name": "KD CUARZO PISOS",
+      "slug": "kd-cuarzo-pisos",
+      "categoryId": "endurecedores",
+      "type": "Endurecedor de Alta Resistencia",
+      "featured": true,
+      "images": {
+        "main": "/productos/kdcuarzo/kd-cuarzo-pisos producto foto.jpg",
+        "banner": "/productos/kdcuarzo/kd-cuarzo-pisos producto foto.jpg",
+        "gallery": [
+          "/productos/kdcuarzo/kd-cuarzo-losas producto foto.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "25kg",
+        "unit": "saco"
+      },
+      "overview": {
+        "tagline": "Endurecedor de alta resistencia para zonas industriales",
+        "shortDescription": "Endurecedor con pigmentos para alto tráfico y zonas industriales.",
+        "fullDescription": "Es un polvo endurecedor de superficie que contiene cemento, pigmentos y cuarzo mineral. Está diseñado para fortalecer al máximo la resistencia de los pisos contra el desgaste, la abrasión y los golpes fuertes (impacto)."
+      },
+      "applications": {
+        "surfaces": ["Pisos", "Bodegas", "Rampas"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Industrial", "Comercial", "Hospitalario", "Deportivo"],
+        "materials": ["Hormigón fresco"],
+        "special": ["Alto tráfico", "Zonas industriales", "Canchas multiusos"]
+      },
+      "features": [
+        {
+          "icon": "strength",
+          "title": "Alta resistencia",
+          "description": "Máxima resistencia a abrasión e impacto"
+        },
+        {
+          "icon": "chemical",
+          "title": "Resistente a químicos",
+          "description": "Soporta grasas y solventes leves"
+        },
+        {
+          "icon": "sun",
+          "title": "Resistente UV",
+          "description": "Color duradero ante rayos UV"
+        },
+        {
+          "icon": "dust",
+          "title": "Sin polvo",
+          "description": "Reduce formación de polvo"
+        }
+      ],
+      "technicalSpecs": {
+        "application": {
+          "method": "Espolvoreado",
+          "surface": "Hormigón fresco",
+          "timing": "Antes del fraguado"
+        },
+        "coverage": {
+          "value": "5-7",
+          "unit": "kg/m²",
+          "description": "Para alto tráfico"
+        }
+      },
+      "colors": [
+        "Gris Cemento",
+        "Rojo",
+        "Verde",
+        "Azul",
+        "Amarillo",
+        "Ladrillo",
+        "Negro",
+        "Blanco"
+      ],
+      "limitations": [
+        "Solo aplicar sobre hormigón fresco",
+        "No aplicar bajo lluvia",
+        "Requiere curado adecuado"
+      ],
+      "relatedProducts": ["kd-cuarzo-losas", "cadeclear-solvente"],
+      "seo": {
+        "metaTitle": "KD CUARZO PISOS - Endurecedor Industrial | CADECO",
+        "metaDescription": "Endurecedor de alta resistencia con pigmentos para zonas industriales. Resistente a químicos y abrasión.",
+        "keywords": ["endurecedor industrial", "pisos industriales", "cuarzo", "KD CUARZO"]
+      }
+    },
+    "cadempaste-interior": {
+      "id": "cadempaste-interior",
+      "sku": "CDP-INT-20",
+      "name": "CADEMPASTE PROFESIONAL INTERIOR",
+      "slug": "cadempaste-interior",
+      "categoryId": "acabados",
+      "type": "Base para Pintura de Interiores",
+      "featured": false,
+      "images": {
+        "main": "/productos/Empastes/obra empaste interior.jpg",
+        "banner": "/productos/Empastes/obra empaste interior.jpg",
+        "gallery": [
+          "/productos/Empastes/obra empaste exterior.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "20kg",
+        "unit": "bolsa"
+      },
+      "overview": {
+        "tagline": "Masilla monocomponente para interiores",
+        "shortDescription": "Masilla monocomponente para alisar paredes interiores.",
+        "fullDescription": "Es una base para pintura (también conocido como masilla o estuco) de un solo componente que se aplica sobre las paredes para dejarlas lisas, estéticas y listas para pintar."
+      },
+      "applications": {
+        "surfaces": ["Paredes"],
+        "locations": ["Interior"],
+        "sectors": ["Residencial", "Comercial"],
+        "materials": ["Hormigón", "Enlucidos", "Fibrocemento", "Fibroyeso"],
+        "special": []
+      },
+      "features": [
+        {
+          "icon": "smooth",
+          "title": "Acabado ultraliso",
+          "description": "Superficie perfecta para pintar"
+        },
+        {
+          "icon": "paint-save",
+          "title": "Ahorra pintura",
+          "description": "Reduce consumo de pintura"
+        },
+        {
+          "icon": "no-chalk",
+          "title": "No entiza",
+          "description": "No suelta polvo blanco"
+        },
+        {
+          "icon": "easy",
+          "title": "Fácil de mezclar",
+          "description": "Sin grumos, aplicación simple"
+        }
+      ],
+      "technicalSpecs": {
+        "coverage": {
+          "value": "1-1.5",
+          "unit": "kg/m²",
+          "description": "Por capa según superficie"
+        }
+      },
+      "limitations": [
+        "Solo para uso interior",
+        "No aplicar en ambientes húmedos permanentes"
+      ],
+      "relatedProducts": ["cadempaste-exterior"],
+      "seo": {
+        "metaTitle": "CADEMPASTE Interior - Masilla para Paredes | CADECO",
+        "metaDescription": "Masilla profesional para interiores. Acabado ultraliso que ahorra pintura y no entiza.",
+        "keywords": ["masilla interior", "empaste", "base pintura", "CADEMPASTE"]
+      }
+    },
+    "cadempaste-exterior": {
+      "id": "cadempaste-exterior",
+      "sku": "CDP-EXT-20",
+      "name": "CADEMPASTE PROFESIONAL EXTERIOR",
+      "slug": "cadempaste-exterior",
+      "categoryId": "acabados",
+      "type": "Base para Pintura de Exteriores",
+      "featured": false,
+      "images": {
+        "main": "/productos/Empastes/obra empaste exterior.jpg",
+        "banner": "/productos/Empastes/obra empaste exterior.jpg",
+        "gallery": [
+          "/productos/Empastes/obra empaste interior.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "20kg",
+        "unit": "bolsa"
+      },
+      "overview": {
+        "tagline": "Masilla resistente para fachadas",
+        "shortDescription": "Masilla resistente a la intemperie para fachadas.",
+        "fullDescription": "Es una base para pintura de un solo componente diseñada para aplicarse en paredes que están a la intemperie. Su propósito es dar un acabado estético, liso y proteger la pared antes de recibir la pintura final."
+      },
+      "applications": {
+        "surfaces": ["Paredes", "Fachadas"],
+        "locations": ["Exterior"],
+        "sectors": ["Residencial", "Comercial"],
+        "materials": ["Hormigón", "Enlucido"],
+        "special": ["Resistente lluvia"]
+      },
+      "features": [
+        {
+          "icon": "adhesion",
+          "title": "Mayor adherencia",
+          "description": "No se desprende con lluvia"
+        },
+        {
+          "icon": "smooth",
+          "title": "Acabado liso",
+          "description": "Ahorra tiempo y pintura"
+        },
+        {
+          "icon": "weather",
+          "title": "Resistente intemperie",
+          "description": "Protege de agentes ambientales"
+        },
+        {
+          "icon": "easy",
+          "title": "Fácil aplicación",
+          "description": "Sin grumos, mezcla fácil"
+        }
+      ],
+      "technicalSpecs": {
+        "coverage": {
+          "value": "1-1.5",
+          "unit": "kg/m²",
+          "description": "Por capa según superficie"
+        }
+      },
+      "limitations": [
+        "No aplicar bajo lluvia directa",
+        "Requiere tiempo de curado antes de pintar"
+      ],
+      "relatedProducts": ["cadempaste-interior"],
+      "seo": {
+        "metaTitle": "CADEMPASTE Exterior - Masilla para Fachadas | CADECO",
+        "metaDescription": "Masilla profesional para exteriores. Resistente a la intemperie y lluvia.",
+        "keywords": ["masilla exterior", "empaste fachadas", "base pintura exterior", "CADEMPASTE"]
+      }
+    },
+    "cadeclear-solvente": {
+      "id": "cadeclear-solvente",
+      "sku": "CDC-SOL-20",
+      "name": "CADECLEAR® Solvente Pisos",
+      "slug": "cadeclear-solvente",
+      "categoryId": "recubrimientos",
+      "type": "Sellador Acrílico de Alto Brillo",
+      "featured": true,
+      "images": {
+        "main": "/productos/acabados/acabados-cadeclear.jpg",
+        "banner": "/productos/acabados/acabados-cadeclear.jpg",
+        "gallery": []
+      },
+      "packaging": {
+        "weight": "20kg",
+        "unit": "cubeta"
+      },
+      "overview": {
+        "tagline": "Sellador acrílico de alto brillo para concreto",
+        "shortDescription": "Sellador líquido para impermeabilizar y dar brillo al concreto.",
+        "fullDescription": "Es un sellador líquido acrílico de alto desempeño que se usa para proteger e impermeabilizar superficies de concreto, dejándolas con un alto brillo."
+      },
+      "applications": {
+        "surfaces": ["Pisos de concreto"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Industrial", "Comercial"],
+        "materials": ["Concreto nuevo", "Concreto existente"],
+        "special": ["Bodegas", "Alto tráfico peatonal", "Lavados frecuentes"]
+      },
+      "features": [
+        {
+          "icon": "waterproof",
+          "title": "Impermeabilizante",
+          "description": "Protege contra humedad"
+        },
+        {
+          "icon": "shine",
+          "title": "Alto brillo",
+          "description": "Brillo superficial inmediato"
+        },
+        {
+          "icon": "protection",
+          "title": "Anti-eflorescencia",
+          "description": "Previene manchas salinas"
+        },
+        {
+          "icon": "durability",
+          "title": "Retarda envejecimiento",
+          "description": "Evita amarillamiento"
+        }
+      ],
+      "technicalSpecs": {
+        "coverage": {
+          "value": "4-6",
+          "unit": "m²/L",
+          "description": "Por capa según porosidad"
+        },
+        "dryTime": {
+          "value": "2-4",
+          "unit": "horas",
+          "description": "Al tacto"
+        }
+      },
+      "colors": [
+        "Transparente",
+        "Negro",
+        "Verde",
+        "Rojo",
+        "Ladrillo",
+        "Amarillo",
+        "Azul"
+      ],
+      "limitations": [
+        "No aplicar sobre superficies húmedas",
+        "Requiere ventilación adecuada durante aplicación"
+      ],
+      "relatedProducts": ["kd-cuarzo-pisos"],
+      "seo": {
+        "metaTitle": "CADECLEAR Solvente - Sellador para Pisos de Concreto | CADECO",
+        "metaDescription": "Sellador acrílico de alto brillo para concreto. Impermeabiliza y protege pisos industriales.",
+        "keywords": ["sellador concreto", "impermeabilizante pisos", "brillo pisos", "CADECLEAR"]
+      }
+    },
+    "cadeco-canchas": {
+      "id": "cadeco-canchas",
+      "sku": "CDC-CAN-20",
+      "name": "CADECO® CANCHAS",
+      "slug": "cadeco-canchas",
+      "categoryId": "recubrimientos",
+      "type": "Recubrimiento para Campos Deportivos",
+      "featured": true,
+      "images": {
+        "main": "/productos/acabados/cadeco-canchas.jpg",
+        "banner": "/productos/acabados/cadeco-canchas.jpg",
+        "gallery": [
+          "/productos/acabados/Resurfacer.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "20kg",
+        "unit": "cubeta"
+      },
+      "overview": {
+        "tagline": "Recubrimiento acrílico para canchas deportivas",
+        "shortDescription": "Recubrimiento acrílico para canchas deportivas y senderos.",
+        "fullDescription": "Es un recubrimiento acrílico de alto desempeño que se utiliza para proteger y dar color a canchas deportivas y otras superficies, tanto en interiores como en exteriores."
+      },
+      "applications": {
+        "surfaces": ["Pisos deportivos", "Senderos", "Ciclorutas"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Deportivo", "Recreativo", "Municipal"],
+        "materials": ["Cemento", "Madera", "Asfalto"],
+        "special": ["Canchas deportivas", "Tenis", "Baloncesto", "Voleibol"]
+      },
+      "features": [
+        {
+          "icon": "strength",
+          "title": "Alta resistencia",
+          "description": "Resistente a desgaste y abrasión"
+        },
+        {
+          "icon": "sun",
+          "title": "Resistente UV",
+          "description": "Color duradero ante sol"
+        },
+        {
+          "icon": "chemical",
+          "title": "Resistente químicos",
+          "description": "Aceites, grasas, hipoclorito"
+        },
+        {
+          "icon": "color",
+          "title": "Color uniforme",
+          "description": "Acabado profesional"
+        }
+      ],
+      "technicalSpecs": {
+        "coverage": {
+          "value": "3-4",
+          "unit": "m²/L",
+          "description": "Por capa según superficie"
+        },
+        "layers": {
+          "value": "2-3",
+          "unit": "capas",
+          "description": "Recomendado"
+        }
+      },
+      "colors": [
+        "Rojo",
+        "Verde",
+        "Azul",
+        "Amarillo",
+        "Blanco"
+      ],
+      "limitations": [
+        "No aplicar bajo lluvia",
+        "Requiere superficie limpia y seca"
+      ],
+      "relatedProducts": ["cadeco-resurfacer"],
+      "seo": {
+        "metaTitle": "CADECO CANCHAS - Pintura para Canchas Deportivas | CADECO",
+        "metaDescription": "Recubrimiento acrílico profesional para canchas deportivas. Alta resistencia y durabilidad.",
+        "keywords": ["pintura canchas", "canchas deportivas", "recubrimiento deportivo", "CADECO"]
+      }
+    },
+    "cadeco-resurfacer": {
+      "id": "cadeco-resurfacer",
+      "sku": "CDC-RSF-25",
+      "name": "CADECO® RESURFACER",
+      "slug": "cadeco-resurfacer",
+      "categoryId": "recubrimientos",
+      "type": "Revestimiento Decorativo y Reparador",
+      "featured": false,
+      "images": {
+        "main": "/productos/acabados/Resurfacer.jpg",
+        "banner": "/productos/acabados/Resurfacer.jpg",
+        "gallery": [
+          "/productos/acabados/cadeco-canchas.jpg"
+        ]
+      },
+      "packaging": {
+        "weight": "25kg",
+        "unit": "saco"
+      },
+      "overview": {
+        "tagline": "Revestimiento para restaurar superficies dañadas",
+        "shortDescription": "Acrílico con cuarzo para restaurar superficies dañadas.",
+        "fullDescription": "Es un revestimiento acrílico con agregados de cuarzo que sirve para restaurar la apariencia y reparar superficies de hormigón o asfalto que tienen imperfecciones o microfisuras."
+      },
+      "applications": {
+        "surfaces": ["Pisos", "Canchas", "Ciclovías", "Aceras"],
+        "locations": ["Exterior"],
+        "sectors": ["Deportivo", "Municipal", "Comercial"],
+        "materials": ["Hormigón", "Asfalto"],
+        "special": ["Reparación", "Restauración", "Tránsito liviano"]
+      },
+      "features": [
+        {
+          "icon": "repair",
+          "title": "Reparación en capa fina",
+          "description": "Corrige imperfecciones"
+        },
+        {
+          "icon": "rejuvenate",
+          "title": "Rejuvenece superficie",
+          "description": "Color profundo y renovado"
+        },
+        {
+          "icon": "porosity",
+          "title": "Reduce porosidad",
+          "description": "Sella la superficie"
+        },
+        {
+          "icon": "economic",
+          "title": "Sistema económico",
+          "description": "Alternativa a reemplazo total"
+        }
+      ],
+      "technicalSpecs": {
+        "coverage": {
+          "value": "1.5-2.5",
+          "unit": "kg/m²",
+          "description": "Por capa según superficie"
+        },
+        "thickness": {
+          "value": "1-2",
+          "unit": "mm",
+          "description": "Capa de aplicación"
+        }
+      },
+      "limitations": [
+        "No para grietas estructurales",
+        "Requiere superficie limpia",
+        "No aplicar bajo lluvia"
+      ],
+      "relatedProducts": ["cadeco-canchas"],
+      "seo": {
+        "metaTitle": "CADECO RESURFACER - Restaurador de Superficies | CADECO",
+        "metaDescription": "Revestimiento acrílico con cuarzo para restaurar hormigón y asfalto. Sistema económico de renovación.",
+        "keywords": ["resurfacer", "restaurador concreto", "reparación pisos", "CADECO"]
+      }
+    },
+    "imperkret-dm": {
+      "id": "imperkret-dm",
+      "sku": "IPK-DM-20",
+      "name": "IMPERKRET DM",
+      "slug": "imperkret-dm",
+      "categoryId": "aditivos",
+      "type": "Aditivo Impermeabilizante y Plastificante",
+      "featured": true,
+      "images": {
+        "main": "/productos/Aditivos/imagen-global-aditivos.jpg",
+        "banner": "/productos/Aditivos/imagen-global-aditivos.jpg",
+        "gallery": []
+      },
+      "packaging": {
+        "weight": "20kg",
+        "unit": "cubeta"
+      },
+      "overview": {
+        "tagline": "Aditivo impermeabilizante y plastificante",
+        "shortDescription": "Aditivo líquido para impermeabilizar hormigón en contacto con agua.",
+        "fullDescription": "Es un aditivo líquido que se añade al hormigón para hacerlo impermeable y, a la vez, lo hace más plástico (fácil de trabajar o moldear). No es tóxico y no contiene cloruros."
+      },
+      "applications": {
+        "surfaces": ["Estructuras", "Piscinas", "Cisternas", "Canales", "Cimentaciones"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Residencial", "Industrial", "Infraestructura"],
+        "materials": ["Hormigón"],
+        "special": ["Contacto permanente con agua"]
+      },
+      "features": [
+        {
+          "icon": "waterproof",
+          "title": "Impermeabilizante",
+          "description": "Hace el hormigón impermeable"
+        },
+        {
+          "icon": "plastic",
+          "title": "Plastificante",
+          "description": "Reduce agua necesaria"
+        },
+        {
+          "icon": "pump",
+          "title": "Facilita bombeo",
+          "description": "Más fácil de trabajar"
+        },
+        {
+          "icon": "strength",
+          "title": "Mayor resistencia",
+          "description": "Aumenta resistencia inicial"
+        }
+      ],
+      "technicalSpecs": {
+        "dosage": {
+          "value": "0.5-1.5",
+          "unit": "%",
+          "description": "Del peso del cemento"
+        },
+        "waterReduction": {
+          "value": "10-15",
+          "unit": "%",
+          "description": "Reducción de agua"
+        }
+      },
+      "limitations": [
+        "No usar en prefabricados con vapor",
+        "Seguir dosificación recomendada"
+      ],
+      "relatedProducts": ["plastidec"],
+      "seo": {
+        "metaTitle": "IMPERKRET DM - Aditivo Impermeabilizante | CADECO",
+        "metaDescription": "Aditivo líquido impermeabilizante y plastificante para hormigón. Ideal para piscinas y cisternas.",
+        "keywords": ["impermeabilizante hormigón", "aditivo piscinas", "plastificante", "IMPERKRET"]
+      }
+    },
+    "plastidec": {
+      "id": "plastidec",
+      "sku": "PLS-DEC-20",
+      "name": "PLASTIDEC",
+      "slug": "plastidec",
+      "categoryId": "aditivos",
+      "type": "Superplastificante Reductor de Agua",
+      "featured": true,
+      "images": {
+        "main": "/productos/Aditivos/imagen-global-aditivos.jpg",
+        "banner": "/productos/Aditivos/imagen-global-aditivos.jpg",
+        "gallery": []
+      },
+      "packaging": {
+        "weight": "20kg",
+        "unit": "cubeta"
+      },
+      "overview": {
+        "tagline": "Superplastificante de alto desempeño",
+        "shortDescription": "Aditivo potente para crear hormigones fluidos de alta resistencia.",
+        "fullDescription": "Es un aditivo líquido superplastificante muy potente, lo que significa que hace al hormigón extremadamente fluido y fácil de trabajar, al mismo tiempo que permite usar mucha menos agua en la mezcla. No es tóxico y no contiene cloruros."
+      },
+      "applications": {
+        "surfaces": ["Estructuras", "Pisos industriales", "Prefabricados"],
+        "locations": ["Interior", "Exterior"],
+        "sectors": ["Industrial", "Infraestructura", "Prefabricados"],
+        "materials": ["Hormigón"],
+        "special": ["Hormigón fluido", "Bombeado", "Alto desempeño"]
+      },
+      "features": [
+        {
+          "icon": "flow",
+          "title": "Extremadamente fluido",
+          "description": "Hormigón muy trabajable"
+        },
+        {
+          "icon": "water-reduction",
+          "title": "Reduce agua",
+          "description": "10-20% menos agua"
+        },
+        {
+          "icon": "pump",
+          "title": "Facilita bombeo",
+          "description": "Reduce segregación"
+        },
+        {
+          "icon": "strength",
+          "title": "Alta resistencia",
+          "description": "Desarrollo rápido de resistencias"
+        }
+      ],
+      "technicalSpecs": {
+        "dosage": {
+          "value": "0.5-2.0",
+          "unit": "%",
+          "description": "Del peso del cemento"
+        },
+        "waterReduction": {
+          "value": "10-20",
+          "unit": "%",
+          "description": "Reducción de agua"
+        }
+      },
+      "limitations": [
+        "No exceder dosificación máxima",
+        "Seguir recomendaciones técnicas"
+      ],
+      "relatedProducts": ["imperkret-dm"],
+      "seo": {
+        "metaTitle": "PLASTIDEC - Superplastificante para Hormigón | CADECO",
+        "metaDescription": "Aditivo superplastificante reductor de agua. Para hormigones fluidos de alto desempeño.",
+        "keywords": ["superplastificante", "reductor agua", "hormigón fluido", "PLASTIDEC"]
+      }
+    }
+  }
+}
