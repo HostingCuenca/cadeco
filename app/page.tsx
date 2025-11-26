@@ -217,10 +217,10 @@ export default function Home() {
                     {category.description}
                   </p>
                   <a
-                    href={`#productos-${category.slug}`}
-                    className="inline-block text-cadeco-orange font-medium hover:text-cadeco-orange-light transition-colors"
+                    href="/productos"
+                    className="inline-block px-6 py-3 bg-cadeco-orange text-white hover:bg-cadeco-orange-light transition-colors"
                   >
-                    Ver productos →
+                    Ver Productos
                   </a>
                 </div>
               </div>
@@ -236,142 +236,70 @@ export default function Home() {
               {Object.values(productsData.products)
                 .filter((product: any) => product.featured)
                 .slice(0, 4)
-                .map((product: any) => (
-                  <div key={product.id} className="bg-white shadow-lg hover:shadow-2xl transition-shadow group">
-                    <div className="relative h-56 overflow-hidden">
-                      <Image
-                        src={product.images.main}
-                        alt={product.name}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
+                .map((product: any) => {
+                  const category = productsData.categories.find((cat: any) =>
+                    cat.productIds.includes(product.id)
+                  );
+                  return (
+                    <div key={product.id} className="bg-white shadow-lg hover:shadow-2xl transition-shadow group">
+                      <div className="relative h-56 overflow-hidden">
+                        <Image
+                          src={product.images.main}
+                          alt={product.name}
+                          fill
+                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-4">
+                        <span className="text-xs text-cadeco-orange font-medium uppercase tracking-wide">
+                          {product.type}
+                        </span>
+                        <h4 className="text-lg font-light text-cadeco-dark mt-2 mb-2">
+                          {product.name}
+                        </h4>
+                        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                          {product.overview.shortDescription}
+                        </p>
+                        <div className="space-y-2">
+                          <a
+                            href={category ? `/productos/${category.slug}/${product.id}` : "#"}
+                            className="block w-full py-2 bg-cadeco-dark text-white text-xs hover:bg-cadeco-orange transition-colors text-center"
+                          >
+                            Ver Producto
+                          </a>
+                          <a
+                            href={`/contacto?producto=${encodeURIComponent(product.name)}`}
+                            className="block w-full py-2 border border-cadeco-orange text-cadeco-orange text-xs hover:bg-cadeco-orange hover:text-white transition-colors text-center"
+                          >
+                            Solicitar Info
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div className="p-4">
-                      <span className="text-xs text-cadeco-orange font-medium uppercase tracking-wide">
-                        {product.type}
-                      </span>
-                      <h4 className="text-lg font-light text-cadeco-dark mt-2 mb-2">
-                        {product.name}
-                      </h4>
-                      <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                        {product.overview.shortDescription}
-                      </p>
-                      <button className="text-sm text-cadeco-orange font-medium hover:text-cadeco-orange-light transition-colors">
-                        Ver detalles →
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Catálogo Completo por Categorías */}
-      {productsData.categories.map((category, categoryIndex) => {
-        const categoryProducts = category.productIds.map(
-          (id) => productsData.products[id as keyof typeof productsData.products]
-        );
-
-        return (
-          <section
-            key={category.id}
-            id={`productos-${category.slug}`}
-            className={categoryIndex % 2 === 0 ? "py-20 bg-white" : "py-20 bg-cadeco-gray"}
+      {/* CTA Ver Todos los Productos */}
+      <section className="py-16 bg-white border-t">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-6">
+            Explora Nuestro Catálogo Completo
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            Descubre todos nuestros productos organizados por categoría con especificaciones técnicas detalladas
+          </p>
+          <a
+            href="/productos"
+            className="inline-block px-12 py-4 bg-cadeco-orange text-white text-lg font-medium hover:bg-cadeco-orange-light transition-colors shadow-lg hover:shadow-xl"
           >
-            <div className="container mx-auto px-4">
-              {/* Header de Categoría */}
-              <div className="text-center mb-12">
-                <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
-                  {category.name}
-                </h2>
-                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                  {category.description}
-                </p>
-              </div>
-
-              {/* Grid de Productos */}
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                {categoryProducts.map((product: any) => (
-                  <div
-                    key={product.id}
-                    className="bg-white shadow-lg hover:shadow-2xl transition-all group"
-                  >
-                    {/* Imagen del Producto */}
-                    <div className="relative h-72 overflow-hidden">
-                      <Image
-                        src={product.images.main}
-                        alt={product.name}
-                        fill
-                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      {product.featured && (
-                        <div className="absolute top-3 right-3 bg-cadeco-orange text-white px-3 py-1 text-xs font-medium rounded-full">
-                          Destacado
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Contenido del Producto */}
-                    <div className="p-5">
-                      {/* Tipo de Producto */}
-                      <span className="text-xs text-cadeco-orange font-medium uppercase tracking-wide">
-                        {product.type}
-                      </span>
-
-                      {/* Nombre */}
-                      <h3 className="text-xl font-light text-cadeco-dark mt-2 mb-3">
-                        {product.name}
-                      </h3>
-
-                      {/* Descripción Corta */}
-                      <p className="text-sm text-gray-600 mb-4 line-clamp-3">
-                        {product.overview.shortDescription}
-                      </p>
-
-                      {/* Tags de Aplicación */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {product.applications.locations.slice(0, 2).map((location: string) => (
-                          <span
-                            key={location}
-                            className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
-                          >
-                            {location}
-                          </span>
-                        ))}
-                      </div>
-
-                      {/* Características Principales */}
-                      <div className="space-y-2 mb-4">
-                        {product.features.slice(0, 3).map((feature: any, idx: number) => (
-                          <div key={idx} className="flex items-start gap-2">
-                            <svg className="w-4 h-4 text-cadeco-orange flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                            <span className="text-xs text-gray-700">{feature.title}</span>
-                          </div>
-                        ))}
-                      </div>
-
-                      {/* Empaque */}
-                      {product.packaging && (
-                        <div className="text-xs text-gray-500 mb-4">
-                          Presentación: <strong>{product.packaging.weight}</strong>
-                        </div>
-                      )}
-
-                      {/* Botón */}
-                      <button className="w-full py-3 bg-cadeco-dark text-white text-sm font-medium hover:bg-cadeco-orange transition-colors">
-                        Ver ficha técnica
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        );
-      })}
+            Ver Catálogo Completo
+          </a>
+        </div>
+      </section>
 
       {/* Servicios y Soporte */}
       <section className="py-20 bg-white border-t">
