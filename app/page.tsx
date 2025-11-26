@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import ApplicationModal from "./components/ApplicationModal";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import ProjectGallery from "./components/ProjectGallery";
+import ProjectCarousel from "./components/ProjectCarousel";
 import { useState } from "react";
 import {
   Droplet,
@@ -112,15 +113,7 @@ export default function Home() {
               Cadeco Global, expertos en aditivos industriales
             </h2>
           </div>
-          <div className="max-w-5xl mx-auto">
-            <Image
-              src="/adagiooo.jpg"
-              alt="Cadeco Global"
-              width={1200}
-              height={600}
-              className="w-full h-auto  shadow-2xl"
-            />
-          </div>
+          <ProjectCarousel />
         </div>
       </section>
 
