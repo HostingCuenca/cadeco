@@ -11,7 +11,7 @@ export const metadata = {
 
 export default function ProductosPage() {
   const categories = productsData.categories;
-  const allProducts = productsData.products;
+  const allProducts = productsData.products as Record<string, any>;
 
   return (
     <>
@@ -33,7 +33,7 @@ export default function ProductosPage() {
       {/* Productos por Categoría */}
       <section className="py-16 bg-cadeco-gray">
         <div className="container mx-auto px-4">
-          {categories.map((category) => {
+          {categories.map((category: any) => {
             const categoryProducts = category.productIds
               .map((id: string) => allProducts[id])
               .filter(Boolean);
