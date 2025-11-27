@@ -150,99 +150,83 @@ export default async function ProductDetailPage({ params }: PageProps) {
 
           {/* Detailed Information Tabs */}
           <div className="bg-white shadow-lg p-8">
-            <div className="grid md:grid-cols-2 gap-8">
-              {/* Características */}
-              <div>
+            {/* Características */}
+            {product.features && product.features.length > 0 && (
+              <div className="mb-8">
                 <h2 className="text-2xl font-light text-cadeco-dark mb-6 border-b border-cadeco-orange pb-3">
                   Características
                 </h2>
-                <ul className="space-y-3">
-                  {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <span className="text-cadeco-orange mt-1">•</span>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {product.features.map((feature: any, index: number) => (
+                    <div key={index} className="flex items-start gap-4 p-4 bg-cadeco-gray rounded">
+                      <span className="text-cadeco-orange text-2xl mt-1">•</span>
+                      <div>
+                        <h3 className="font-medium text-cadeco-dark mb-1">{feature.title}</h3>
+                        <p className="text-sm text-gray-600">{feature.description}</p>
+                      </div>
+                    </div>
                   ))}
-                </ul>
+                </div>
               </div>
+            )}
 
-              {/* Beneficios */}
-              <div>
-                <h2 className="text-2xl font-light text-cadeco-dark mb-6 border-b border-cadeco-orange pb-3">
-                  Beneficios
-                </h2>
-                <ul className="space-y-3">
-                  {product.benefits.map((benefit, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <span className="text-cadeco-orange mt-1">✓</span>
-                      <span className="text-gray-700">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+            {/* Aplicaciones por Tipo */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 pt-8 border-t border-gray-200">
+              {product.applications.surfaces && product.applications.surfaces.length > 0 && (
+                <div>
+                  <h3 className="font-medium text-cadeco-dark mb-3">Superficies</h3>
+                  <ul className="space-y-2">
+                    {product.applications.surfaces.map((surface: string, index: number) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-700">
+                        <span className="text-cadeco-orange">✓</span>
+                        {surface}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {product.applications.materials && product.applications.materials.length > 0 && (
+                <div>
+                  <h3 className="font-medium text-cadeco-dark mb-3">Materiales</h3>
+                  <ul className="space-y-2">
+                    {product.applications.materials.map((material: string, index: number) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-700">
+                        <span className="text-cadeco-orange">✓</span>
+                        {material}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              {product.applications.sectors && product.applications.sectors.length > 0 && (
+                <div>
+                  <h3 className="font-medium text-cadeco-dark mb-3">Sectores</h3>
+                  <ul className="space-y-2">
+                    {product.applications.sectors.map((sector: string, index: number) => (
+                      <li key={index} className="flex items-center gap-2 text-gray-700">
+                        <span className="text-cadeco-orange">✓</span>
+                        {sector}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
 
-            {/* Aplicaciones */}
-            {product.applications.uses && product.applications.uses.length > 0 && (
+            {/* Limitaciones */}
+            {(product as any).limitations && (product as any).limitations.length > 0 && (
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h2 className="text-2xl font-light text-cadeco-dark mb-6">
-                  Aplicaciones Recomendadas
+                  Limitaciones
                 </h2>
-                <div className="grid md:grid-cols-3 gap-4">
-                  {product.applications.uses.map((use, index) => (
-                    <div key={index} className="bg-cadeco-gray p-4 rounded">
-                      <p className="text-gray-700">{use}</p>
-                    </div>
+                <ul className="space-y-3">
+                  {(product as any).limitations.map((limitation: string, index: number) => (
+                    <li key={index} className="flex items-start gap-3">
+                      <span className="text-red-500 mt-1">✗</span>
+                      <span className="text-gray-700">{limitation}</span>
+                    </li>
                   ))}
-                </div>
-              </div>
-            )}
-
-            {/* Modo de Uso */}
-            {product.usage && (
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h2 className="text-2xl font-light text-cadeco-dark mb-6">
-                  Modo de Uso
-                </h2>
-                <div className="space-y-4">
-                  {product.usage.preparation && (
-                    <div>
-                      <h3 className="font-medium text-cadeco-dark mb-2">Preparación:</h3>
-                      <p className="text-gray-700">{product.usage.preparation}</p>
-                    </div>
-                  )}
-                  {product.usage.application && (
-                    <div>
-                      <h3 className="font-medium text-cadeco-dark mb-2">Aplicación:</h3>
-                      <p className="text-gray-700">{product.usage.application}</p>
-                    </div>
-                  )}
-                  {product.usage.curing && (
-                    <div>
-                      <h3 className="font-medium text-cadeco-dark mb-2">Curado:</h3>
-                      <p className="text-gray-700">{product.usage.curing}</p>
-                    </div>
-                  )}
-                </div>
-              </div>
-            )}
-
-            {/* Especificaciones Técnicas */}
-            {product.specifications && (
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h2 className="text-2xl font-light text-cadeco-dark mb-6">
-                  Especificaciones Técnicas
-                </h2>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {Object.entries(product.specifications).map(([key, value]) => (
-                    <div key={key} className="bg-cadeco-gray p-4">
-                      <span className="font-medium text-cadeco-dark capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}:
-                      </span>
-                      <span className="ml-2 text-gray-700">{value as string}</span>
-                    </div>
-                  ))}
-                </div>
+                </ul>
               </div>
             )}
           </div>
