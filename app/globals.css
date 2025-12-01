@@ -11,6 +11,12 @@
   --cadeco-black: #000000;
 }
 
+/* Scroll suave y compensación por header fixed */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; /* Altura del header aumentada por logo más grande */
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

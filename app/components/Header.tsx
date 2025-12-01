@@ -10,9 +10,9 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
+      <nav className="container mx-auto px-4 py-5 flex items-center justify-between">
         <Link href="/" className="flex items-center">
-          <div className="relative w-32 h-12">
+          <div className="relative w-44 h-16">
             <Image
               src="/logoprincipal.png"
               alt="Cadeco Ecuador"
@@ -30,12 +30,12 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/nosotros" className="text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium">
+            <Link href="/#nosotros" className="text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium">
               Nosotros
             </Link>
           </li>
           <li>
-            <Link href="/productos" className="text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium">
+            <Link href="/#productos" className="text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium">
               Productos
             </Link>
           </li>
@@ -45,7 +45,7 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/contacto" className="text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium">
+            <Link href="/#contacto" className="text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium">
               Contacto
             </Link>
           </li>
@@ -129,7 +129,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/nosotros"
+                href="/#nosotros"
                 className="block text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -138,7 +138,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/productos"
+                href="/#productos"
                 className="block text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -156,7 +156,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/contacto"
+                href="/#contacto"
                 className="block text-cadeco-dark hover:text-cadeco-orange transition-colors font-medium py-2"
                 onClick={() => setIsMenuOpen(false)}
               >

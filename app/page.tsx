@@ -5,27 +5,44 @@ import Header from "./components/Header";
 import ApplicationModal from "./components/ApplicationModal";
 import WhatsAppFloat from "./components/WhatsAppFloat";
 import ProjectGallery from "./components/ProjectGallery";
-import ProjectCarousel from "./components/ProjectCarousel";
+// import ProjectCarousel from "./components/ProjectCarousel"; // Comentado - sección Cadeco Global comentada
 import { useState } from "react";
-import {
-  Droplet,
-  Building2,
-  PaintBucket,
-  BookOpen,
-  Lightbulb,
-  Headphones,
-  Wrench,
-  GraduationCap
-} from "lucide-react";
+// import { Droplet, Building2, PaintBucket, Wrench } from "lucide-react"; // Comentado - no se usan actualmente
 import productsData from "@/data/products.json";
+import { motion } from "framer-motion";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPosition, setSelectedPosition] = useState("");
 
+  // Estados para el formulario de contacto
+  const [contactForm, setContactForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: ""
+  });
+
   const handleApplyClick = (position: string) => {
     setSelectedPosition(position);
     setIsModalOpen(true);
+  };
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Formatear mensaje para WhatsApp
+    const message = `Hola Cadeco, me gustaría contactarlos:%0A%0A` +
+      `Nombre: ${contactForm.name}%0A` +
+      `Email: ${contactForm.email}%0A` +
+      `Teléfono: ${contactForm.phone}%0A` +
+      `Mensaje: ${contactForm.message}`;
+
+    // Abrir WhatsApp
+    window.open(`https://api.whatsapp.com/send/?phone=593960162310&text=${message}&type=phone_number&app_absent=0`, '_blank');
+
+    // Limpiar formulario
+    setContactForm({ name: "", email: "", phone: "", message: "" });
   };
 
   return (
@@ -53,7 +70,9 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-4 py-32">
           <div className="max-w-4xl">
             <div className="mb-8">
+                {/* Content
               <div className="relative w-48 h-16">
+
                 <Image
                   src="/logoprincipal-letrasblancas.png"
                   alt="Cadeco Global"
@@ -61,6 +80,7 @@ export default function Home() {
                   className="object-contain"
                 />
               </div>
+                */}
             </div>
             <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-6">
               Desarrollamos confianza, rendimiento y soluciones técnicas para la construcción moderna.
@@ -105,7 +125,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - Cadeco Global */}
+      {/* About Section - Cadeco Global - COMENTADO PARA SIMPLIFICAR
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -116,63 +136,140 @@ export default function Home() {
           <ProjectCarousel />
         </div>
       </section>
+      */}
 
       {/* Nosotros Section */}
       <section id="nosotros" className="py-20 bg-cadeco-gray">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
               Quiénes somos
             </h2>
-          </div>
+            <h3 className="text-2xl md:text-3xl font-light text-cadeco-orange mb-8">
+              Experiencia, calidad y confianza
+            </h3>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto mb-16"
+          >
+            {/* Columna izquierda: Información */}
             <div>
-              <h3 className="text-3xl font-light text-cadeco-dark mb-6">
-                Experiencia y Compromiso
-              </h3>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Cadeco Global es sinónimo de excelencia y compromiso en la industria de la construcción.
-                Desde 1968, hemos liderado el desarrollo de soluciones innovadoras que han marcado un
-                impacto positivo en proyectos a nivel nacional e internacional.
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                En Cadeco somos una fábrica con procesos y tecnología europea, dedicada a desarrollar morteros y soluciones para la construcción con altos estándares de rendimiento y durabilidad.
               </p>
-              <div className="inline-block px-6 py-3 bg-cadeco-orange text-white  font-medium">
-                Calidad Certificada
+              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                Nuestro enfoque es simple: productos confiables que los maestros recomiendan y los consumidores valoran por su resultado en obra.
+              </p>
+
+              {/* Características con checkmarks */}
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-cadeco-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-base text-gray-700 font-medium">Control de calidad en cada lote</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-cadeco-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-base text-gray-700 font-medium">Procesos modernos y precisos</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-cadeco-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-base text-gray-700 font-medium">Productos probados en obras reales</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
+                    <svg className="w-6 h-6 text-cadeco-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <p className="text-base text-gray-700 font-medium">Soporte técnico directo</p>
+                </div>
               </div>
             </div>
 
+            {/* Columna derecha: Tarjetas 2x2 */}
             <div className="grid grid-cols-2 gap-6">
-              <div className="bg-white p-8  shadow-lg text-center">
-                <div className="text-5xl font-light text-cadeco-orange mb-2">1968</div>
-                <p className="text-gray-600 font-medium">Año de fundación</p>
+              <div className="bg-white p-8 shadow-lg text-center">
+                <h4 className="text-5xl font-light text-cadeco-orange mb-2">10+</h4>
+                <p className="text-lg font-medium text-cadeco-dark mb-3">años</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Experiencia en soluciones para la construcción con estándares europeos
+                </p>
               </div>
-              <div className="bg-white p-8  shadow-lg text-center">
-                <div className="text-5xl font-light text-cadeco-orange mb-2">1500+</div>
-                <p className="text-gray-600 font-medium">Proyectos realizados</p>
+
+              <div className="bg-white p-8 shadow-lg text-center">
+                <h4 className="text-lg font-medium text-cadeco-dark mb-3">Control de calidad</h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Cada lote verificado en planta y obra. Pruebas de adherencia, rendimiento y estabilidad
+                </p>
               </div>
-              <div className="bg-white p-8  shadow-lg text-center">
-                <div className="text-5xl font-light text-cadeco-orange mb-2">200+</div>
-                <p className="text-gray-600 font-medium">Profesionales comprometidos</p>
+
+              <div className="bg-white p-8 shadow-lg text-center">
+                <h4 className="text-lg font-medium text-cadeco-dark mb-3">Obras verificadas</h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Productos usados por maestros y profesionales con resultados consistentes
+                </p>
               </div>
-              <div className="bg-white p-8  shadow-lg text-center">
-                <div className="text-5xl font-light text-cadeco-orange mb-2">50+</div>
-                <p className="text-gray-600 font-medium">Alianzas estratégicas</p>
+
+              <div className="bg-white p-8 shadow-lg text-center">
+                <h4 className="text-lg font-medium text-cadeco-dark mb-3">Alianzas técnicas</h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Colaboraciones con proveedores que garantizan respaldo para cada producto
+                </p>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="text-center">
-            <p className="text-lg italic text-gray-600">
-              &quot;José Pérez - Gerente General, Cadeco Global&quot;
-            </p>
-          </div>
+          {/* Misión destacada - Fuera del grid */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="max-w-4xl mx-auto"
+          >
+            <div className="bg-cadeco-dark text-white p-10 text-center shadow-xl">
+              <h4 className="text-2xl md:text-3xl font-light mb-4">Nuestra misión:</h4>
+              <p className="text-lg md:text-xl leading-relaxed">
+                Que cada cliente entienda por qué Cadeco es la elección de los profesionales.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Productos Section Intro */}
       <section id="productos" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
             <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-6">
               Productos
             </h2>
@@ -182,7 +279,7 @@ export default function Home() {
               certificada y respaldo técnico. Desde Ecuador al mundo, construimos relaciones de confianza con
               distribuidores, constructoras e inversionistas que buscan innovación y rentabilidad en el sector industrial.
             </p>
-          </div>
+          </motion.div>
 
           {/* Productos Cards - Categorías desde JSON */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
@@ -276,81 +373,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA Ver Todos los Productos */}
-      <section className="py-16 bg-white border-t">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-6">
-            Explora Nuestro Catálogo Completo
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Descubre todos nuestros productos organizados por categoría con especificaciones técnicas detalladas
-          </p>
-          <a
-            href="/productos"
-            className="inline-block px-12 py-4 bg-cadeco-orange text-white text-lg font-medium hover:bg-cadeco-orange-light transition-colors shadow-lg hover:shadow-xl"
-          >
-            Ver Catálogo Completo
-          </a>
-        </div>
-      </section>
-
-      {/* Servicios y Soporte */}
-      <section className="py-20 bg-white border-t">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
-              Servicios y Soporte
-            </h2>
-            <p className="text-xl text-gray-600">
-              Más que productos, ofrecemos soluciones completas
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Asesoría Técnica */}
-            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <BookOpen className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Asesoría Técnica</h3>
-            </div>
-
-            {/* Desarrollo a Medida */}
-            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <Lightbulb className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Desarrollo a Medida</h3>
-            </div>
-
-            {/* Soporte Técnico */}
-            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <Headphones className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Soporte Especializado</h3>
-            </div>
-
-            {/* Capacitación */}
-            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
-              <div className="mb-4">
-                <GraduationCap className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
-              </div>
-              <h3 className="font-light text-xl text-cadeco-dark">Capacitación</h3>
-            </div>
-          </div>
-
-          <div className="text-center mt-12">
-            <a
-              href="#contacto"
-              className="inline-block px-8 py-4 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors text-lg"
-            >
-              Solicitar asesoría
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Alianzas Section */}
       <section id="alianzas" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -377,6 +399,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* CTA Ver Todos los Productos */}
+      <section className="py-16 bg-white border-t border-b">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-6">
+            Explora Nuestro Catálogo Completo
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+            Descubre todos nuestros productos organizados por categoría con especificaciones técnicas detalladas
+          </p>
+          <a
+            href="https://api.whatsapp.com/send/?phone=593960162310&text=Hola+Cadeco%2C+me+gustaría+solicitar+el+catálogo+completo+de+productos&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-12 py-4 bg-cadeco-orange text-white text-lg font-medium hover:bg-cadeco-orange-light transition-colors shadow-lg hover:shadow-xl"
+            style={{ backgroundColor: 'rgb(213, 52, 3)' }}
+          >
+            Solicitar Catálogo Completo
+          </a>
+        </div>
+      </section>
+
+      {/* Servicios y Soporte - COMENTADO PARA SIMPLIFICAR
+      <section className="py-20 bg-white border-t">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
+              Servicios y Soporte
+            </h2>
+            <p className="text-xl text-gray-600">
+              Más que productos, ofrecemos soluciones completas
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+              <div className="mb-4">
+                <BookOpen className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
+              </div>
+              <h3 className="font-light text-xl text-cadeco-dark">Asesoría Técnica</h3>
+            </div>
+
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+              <div className="mb-4">
+                <Lightbulb className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
+              </div>
+              <h3 className="font-light text-xl text-cadeco-dark">Desarrollo a Medida</h3>
+            </div>
+
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+              <div className="mb-4">
+                <Headphones className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
+              </div>
+              <h3 className="font-light text-xl text-cadeco-dark">Soporte Especializado</h3>
+            </div>
+
+            <div className="bg-cadeco-gray p-8 shadow-lg hover:shadow-2xl transition-shadow text-center flex flex-col items-center">
+              <div className="mb-4">
+                <GraduationCap className="w-12 h-12" strokeWidth={1.5} style={{ color: 'rgb(213, 52, 3)' }} />
+              </div>
+              <h3 className="font-light text-xl text-cadeco-dark">Capacitación</h3>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <a
+              href="#contacto"
+              className="inline-block px-8 py-4 bg-cadeco-orange text-white font-medium hover:bg-cadeco-orange-light transition-colors text-lg"
+            >
+              Solicitar asesoría
+            </a>
+          </div>
+        </div>
+      </section>
+      */}
+
       {/* Nuestro Impacto Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -402,14 +499,26 @@ export default function Home() {
       <section id="contacto" className="py-20 bg-cadeco-gray">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
               <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">Contáctanos</h2>
               <p className="text-xl text-gray-600">
                 Estamos listos para hacer realidad tu próximo proyecto
               </p>
-            </div>
+            </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              className="grid md:grid-cols-2 gap-12"
+            >
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-cadeco-orange flex items-center justify-center flex-shrink-0">
@@ -477,7 +586,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <form className="space-y-4 bg-white p-8  shadow-lg">
+              <form onSubmit={handleContactSubmit} className="space-y-4 bg-white p-8  shadow-lg">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-cadeco-dark mb-2">
                     Nombre completo
@@ -485,8 +594,11 @@ export default function Home() {
                   <input
                     type="text"
                     id="name"
+                    value={contactForm.name}
+                    onChange={(e) => setContactForm({ ...contactForm, name: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-cadeco-orange focus:border-transparent"
                     placeholder="Tu nombre"
+                    required
                   />
                 </div>
                 <div>
@@ -496,8 +608,11 @@ export default function Home() {
                   <input
                     type="email"
                     id="email"
+                    value={contactForm.email}
+                    onChange={(e) => setContactForm({ ...contactForm, email: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-cadeco-orange focus:border-transparent"
                     placeholder="tu@email.com"
+                    required
                   />
                 </div>
                 <div>
@@ -507,8 +622,11 @@ export default function Home() {
                   <input
                     type="tel"
                     id="phone"
+                    value={contactForm.phone}
+                    onChange={(e) => setContactForm({ ...contactForm, phone: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-cadeco-orange focus:border-transparent"
                     placeholder="+593 XXX XXX XXX"
+                    required
                   />
                 </div>
                 <div>
@@ -518,18 +636,22 @@ export default function Home() {
                   <textarea
                     id="message"
                     rows={4}
+                    value={contactForm.message}
+                    onChange={(e) => setContactForm({ ...contactForm, message: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300  focus:ring-2 focus:ring-cadeco-orange focus:border-transparent"
                     placeholder="Cuéntanos sobre tu proyecto..."
+                    required
                   ></textarea>
                 </div>
                 <button
                   type="submit"
                   className="w-full px-8 py-4 bg-cadeco-orange text-white  font-medium hover:bg-cadeco-orange-light transition-colors"
+                  style={{ backgroundColor: 'rgb(213, 52, 3)' }}
                 >
-                  Enviar Mensaje
+                  Enviar por WhatsApp
                 </button>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
