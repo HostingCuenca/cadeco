@@ -88,6 +88,7 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl">
               Fabricamos aditivos, morteros y recubrimientos de alto desempeño con respaldo técnico, entrega eficiente y calidad certificada.
             </p>
+            {/* Botones comentados
             <div className="flex flex-col sm:flex-row gap-4">
               <a
                 href="#productos"
@@ -102,6 +103,7 @@ export default function Home() {
                 Hablar con un asesor Cadeco
               </a>
             </div>
+            */}
           </div>
         </div>
 
