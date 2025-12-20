@@ -26,7 +26,7 @@ export default function WhatsAppFloat() {
             <X className="w-3 h-3" />
           </button>
           <p className="text-cadeco-dark font-medium text-sm">
-            ¿Necesitas Ayuda?
+            Solicitar información
           </p>
           <p className="text-gray-600 text-xs mt-1">
             Chatea con nosotros
@@ -37,11 +37,11 @@ export default function WhatsAppFloat() {
       {/* Botón de WhatsApp */}
       <button
         onClick={handleWhatsAppClick}
-        className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group relative"
+        className="bg-green-500 hover:bg-green-600 text-white p-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 group relative"
         aria-label="Contactar por WhatsApp"
       >
         <svg
-          className="w-7 h-7"
+          className="w-10 h-10"
           fill="currentColor"
           viewBox="0 0 24 24"
         >

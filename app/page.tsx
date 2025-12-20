@@ -83,10 +83,10 @@ export default function Home() {
                 */}
             </div>
             <h1 className="text-5xl md:text-7xl font-light text-white leading-tight mb-6">
-              Desarrollamos confianza, rendimiento y soluciones técnicas para la construcción moderna.
+              Fabricamos soluciones profesionales para la construcción en Ecuador
             </h1>
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl">
-              Fabricamos aditivos, morteros y recubrimientos de alto desempeño con respaldo técnico, entrega eficiente y calidad certificada.
+              Morteros, aditivos y recubrimientos desarrollados para obras exigentes, con enfoque técnico, respaldo y acompañamiento real.
             </p>
             {/* Botones comentados
             <div className="flex flex-col sm:flex-row gap-4">
@@ -151,11 +151,8 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-4">
-              Quiénes somos
+              ¿Quiénes somos?
             </h2>
-            <h3 className="text-2xl md:text-3xl font-light text-cadeco-orange mb-8">
-              Experiencia, calidad y confianza
-            </h3>
           </motion.div>
 
           <motion.div
@@ -168,10 +165,13 @@ export default function Home() {
             {/* Columna izquierda: Información */}
             <div>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                En Cadeco somos una fábrica con procesos y tecnología europea, dedicada a desarrollar morteros y soluciones para la construcción con altos estándares de rendimiento y durabilidad.
+                Cadeco Aditivos Cía. Ltda. es una empresa ecuatoriana dedicada al desarrollo y fabricación de aditivos, morteros y recubrimientos para la construcción.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Trabajamos con un enfoque técnico, comercial y humano, acompañando a maestros, ferreterías, constructoras y profesionales en cada proyecto.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                Nuestro enfoque es simple: productos confiables que los maestros recomiendan y los consumidores valoran por su resultado en obra.
+                Nuestro objetivo es claro: ofrecer productos confiables, soluciones prácticas y relaciones de largo plazo con clientes, proveedores y aliados estratégicos.
               </p>
 
               {/* Características con checkmarks */}
@@ -182,7 +182,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-base text-gray-700 font-medium">Control de calidad en cada lote</p>
+                  <p className="text-base text-gray-700 font-medium">Experiencia en el sector de la construcción</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
@@ -190,7 +190,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-base text-gray-700 font-medium">Procesos modernos y precisos</p>
+                  <p className="text-base text-gray-700 font-medium">Desarrollo de productos para obra real</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
@@ -198,7 +198,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-base text-gray-700 font-medium">Productos probados en obras reales</p>
+                  <p className="text-base text-gray-700 font-medium">Soporte técnico y comercial</p>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center">
@@ -206,7 +206,7 @@ export default function Home() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <p className="text-base text-gray-700 font-medium">Soporte técnico directo</p>
+                  <p className="text-base text-gray-700 font-medium">Enfoque en crecimiento y expansión sostenible</p>
                 </div>
               </div>
             </div>
