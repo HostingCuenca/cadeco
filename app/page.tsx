@@ -304,7 +304,7 @@ export default function Home() {
                     </p>
                   </div>
                 </div>
-                <div className="bg-white p-6">
+                {/* <div className="bg-white p-6">
                   <p className="text-gray-600 leading-relaxed mb-4">
                     {category.description}
                   </p>
@@ -314,7 +314,7 @@ export default function Home() {
                   >
                     Ver Productos
                   </a>
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -324,7 +324,7 @@ export default function Home() {
             <h3 className="text-3xl md:text-4xl font-light text-cadeco-dark mb-8 text-center">
               Productos Destacados
             </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
               {Object.values(productsData.products)
                 .filter((product: any) => product.featured)
                 .slice(0, 4)
@@ -349,7 +349,7 @@ export default function Home() {
                         <h4 className="text-lg font-light text-cadeco-dark mt-2 mb-2">
                           {product.name}
                         </h4>
-                        <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                        {/* <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                           {product.overview.shortDescription}
                         </p>
                         <div className="space-y-2">
@@ -365,11 +365,24 @@ export default function Home() {
                           >
                             Solicitar Info
                           </a>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   );
                 })}
+            </div>
+
+            {/* Botón general para solicitar información */}
+            <div className="text-center">
+              <a
+                href="https://api.whatsapp.com/send/?phone=593960162310&text=Hola+Cadeco%2C+me+gustaría+obtener+más+información+sobre+sus+productos&type=phone_number&app_absent=0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-12 py-4 bg-cadeco-orange text-white text-lg font-medium hover:bg-cadeco-orange-light transition-colors shadow-lg hover:shadow-xl"
+                style={{ backgroundColor: 'rgb(213, 52, 3)' }}
+              >
+                Solicitar más información sobre productos
+              </a>
             </div>
           </div>
         </div>
@@ -387,17 +400,16 @@ export default function Home() {
               Confianza y Colaboración
             </p>
           </div>
+        </div>
 
-          <div className="max-w-5xl mx-auto">
-            <div className="relative w-full h-48 md:h-64">
-              <Image
-                src="/ok-logos.gif"
-                alt="Nuestros Aliados"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
+        {/* Imagen full width - ocupa todo el ancho sin padding */}
+        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-64 md:h-96">
+          <Image
+            src="/ok-logos.gif"
+            alt="Nuestros Aliados"
+            fill
+            className="object-cover"
+          />
         </div>
       </section>
 
