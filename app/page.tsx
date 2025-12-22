@@ -384,17 +384,17 @@ export default function Home() {
               Confianza y Colaboración
             </p>
           </div>
+        </div>
 
-          {/* Imagen con ancho contenido */}
-          <div className="max-w-5xl mx-auto">
-            <div className="relative h-64 md:h-96">
-              <Image
-                src="/ok-logos.gif"
-                alt="Nuestros Aliados"
-                fill
-                className="object-cover"
-              />
-            </div>
+        {/* Imagen full width con márgenes blancos */}
+        <div className="px-8 md:px-12">
+          <div className="relative h-64 md:h-96">
+            <Image
+              src="/ok-logos.gif"
+              alt="Nuestros Aliados"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
       </section>
