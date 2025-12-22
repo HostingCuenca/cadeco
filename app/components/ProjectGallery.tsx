@@ -23,16 +23,7 @@ export default function ProjectGallery() {
       image: "https://static.wixstatic.com/media/ff6f26_94ea3d58e217476d91951e41d8412088~mv2.jpg/v1/fit/w_900,h_422,q_90,enc_avif,quality_auto/ff6f26_94ea3d58e217476d91951e41d8412088~mv2.jpg",
       alt: "Proyecto 3"
     },
-    {
-      id: 4,
-      image: "https://static.wixstatic.com/media/c837a6_ff17ef7473f04d19bbacf6161681a26c~mv2.jpg/v1/fit/w_1164,h_422,q_90,enc_avif,quality_auto/c837a6_ff17ef7473f04d19bbacf6161681a26c~mv2.jpg",
-      alt: "Proyecto 4"
-    },
-    {
-      id: 5,
-      image: "https://static.wixstatic.com/media/c837a6_c5afd1e1cd2042a4bc55b49fb93a8573~mv2.jpg/v1/fit/w_1164,h_422,q_90,enc_avif,quality_auto/c837a6_c5afd1e1cd2042a4bc55b49fb93a8573~mv2.jpg",
-      alt: "Proyecto 5"
-    },
+   
 
     {
       id: 7,
