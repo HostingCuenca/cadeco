@@ -33,11 +33,7 @@ export default function ProjectGallery() {
       image: "https://static.wixstatic.com/media/c837a6_c5afd1e1cd2042a4bc55b49fb93a8573~mv2.jpg/v1/fit/w_1164,h_422,q_90,enc_avif,quality_auto/c837a6_c5afd1e1cd2042a4bc55b49fb93a8573~mv2.jpg",
       alt: "Proyecto 5"
     },
-    {
-      id: 6,
-      image: "https://static.wixstatic.com/media/c837a6_a4eefd197f2049a598ba9749e86ce259~mv2.jpg/v1/fit/w_1164,h_422,q_90,enc_avif,quality_auto/c837a6_a4eefd197f2049a598ba9749e86ce259~mv2.jpg",
-      alt: "Proyecto 6"
-    },
+
     {
       id: 7,
       image: "/proyectos/1.jpeg",

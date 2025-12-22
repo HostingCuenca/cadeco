@@ -259,12 +259,12 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-light text-cadeco-dark mb-6">
               Productos
             </h2>
-            <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            {/* <p className="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
               Cadeco Global es una empresa ecuatoriana dedicada a la fabricación de aditivos, morteros y
               recubrimientos para la construcción. Desarrollamos soluciones de alto rendimiento con calidad
               certificada y respaldo técnico. Desde Ecuador al mundo, construimos relaciones de confianza con
               distribuidores, constructoras e inversionistas que buscan innovación y rentabilidad en el sector industrial.
-            </p>
+            </p> */}
           </motion.div>
 
           {/* Productos Cards - Categorías desde JSON */}
