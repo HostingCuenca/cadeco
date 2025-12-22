@@ -243,22 +243,6 @@ export default function Home() {
               </div>
             </div>
           </motion.div>
-
-          {/* Misión destacada - Fuera del grid */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="max-w-4xl mx-auto"
-          >
-            <div className="bg-cadeco-dark text-white p-10 text-center shadow-xl">
-              <h4 className="text-2xl md:text-3xl font-light mb-4">Nuestra misión:</h4>
-              <p className="text-lg md:text-xl leading-relaxed">
-                Que cada cliente entienda por qué Cadeco es la elección de los profesionales.
-              </p>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -400,16 +384,18 @@ export default function Home() {
               Confianza y Colaboración
             </p>
           </div>
-        </div>
 
-        {/* Imagen full width - ocupa todo el ancho sin padding */}
-        <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] h-64 md:h-96">
-          <Image
-            src="/ok-logos.gif"
-            alt="Nuestros Aliados"
-            fill
-            className="object-cover"
-          />
+          {/* Imagen con ancho contenido */}
+          <div className="max-w-5xl mx-auto">
+            <div className="relative h-64 md:h-96">
+              <Image
+                src="/ok-logos.gif"
+                alt="Nuestros Aliados"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
