@@ -44,7 +44,7 @@ export default function Footer() {
               <li>WhatsApp/Cel:</li>
               <li className="ml-2">096 0162 310</li>
               <li className="ml-2">098 2428 979</li>
-              <li>info@cadecoglobal.com</li>
+              <li>facturacion@cadecoaditivos.com</li>
             </ul>
           </div>
         </div>
