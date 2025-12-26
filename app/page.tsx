@@ -543,7 +543,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-light text-cadeco-dark mb-1">Email</h3>
-                    <p className="text-gray-600">info@cadecoglobal.com</p>
+                    <p className="text-gray-600">facturacion@cadecoaditivos.com</p>
                   </div>
                 </div>
 

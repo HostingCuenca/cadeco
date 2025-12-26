@@ -89,7 +89,7 @@ export default function ContactoPage() {
                       Email
                     </h3>
                     <p className="text-gray-600 leading-relaxed">
-                      info@cadecoglobal.com
+                      facturacion@cadecoaditivos.com
                     </p>
                   </div>
                 </div>
